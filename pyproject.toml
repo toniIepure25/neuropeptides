@@ -34,7 +34,7 @@ dev = [
   "build>=1.2",
   "pre-commit>=4.7.0",
 ]
-docs = ["mkdocs-material>=9.5"]
+docs = ["mkdocs-material>=9.8.1"]
 release = ["build>=1.2", "cyclonedx-bom>=8.0.1"]
 
 [project.scripts]
