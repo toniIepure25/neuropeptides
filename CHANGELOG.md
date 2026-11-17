@@ -31,8 +31,9 @@ Research-grade hardening, a public API contract and an attested release path.
 - `docs/API.md`, `docs/ARCHITECTURE.md`, `docs/PERFORMANCE.md`,
   `docs/RELEASE_CHECKLIST.md`, `SECURITY.md` and `README.md` describe the new
   contract, supply-chain and documentation surfaces.
-- All GitHub Actions are pinned to immutable commit SHAs; major version upgrades
-  are deferred and Dependabot ignores them for this release.
+- All GitHub Actions are pinned to immutable commit SHAs. Dependabot groups
+  routine updates; existing major toolchain updates were merged only after the
+  full CI matrix passed.
 - The release checklist now requires strict docs, link and API checks plus SBOM
   and attestation verification.
 
