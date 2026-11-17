@@ -1,0 +1,44 @@
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: build and publish ${{ github.ref_name }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install build tooling
+        run: python -m pip install build
+      - name: Check release metadata
+        run: python scripts/check_release.py --tag "$GITHUB_REF_NAME"
+      - name: Build sdist and wheel
+        env:
+          SOURCE_DATE_EPOCH: "1794680589"
+        run: python -m build
+      - name: Normalize sdist timestamps
+        run: python scripts/normalize_sdist.py dist/*.tar.gz --epoch 1794680589
+      - name: Generate checksums
+        run: |
+          cd dist
+          sha256sum * > ../SHA256SUMS
+          cd ..
+          cat SHA256SUMS
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/* SHA256SUMS \
+            --verify-tag \
+            --title "ntx $GITHUB_REF_NAME" \
+            --notes-file "docs/releases/$GITHUB_REF_NAME.md"

@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a reproducible defect in ntx
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include abstracts, full text, credentials, or personal data.
+        Security issues must use private vulnerability reporting instead.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Exact commands and a minimal description of the input.
+      placeholder: |
+        python -m ntx demo --corpus demo.json --db demo.db
+        python -m ntx check --db demo.db
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ntx version
+      description: Output of `python -m ntx --version`.
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python and OS
+      placeholder: Python 3.12.4 on Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Redact paths or metadata that you do not want to share.
+      render: shell

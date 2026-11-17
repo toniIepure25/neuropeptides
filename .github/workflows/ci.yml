@@ -1,0 +1,104 @@
+name: ci
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: quality (py${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+      - name: Release metadata and public-data checks
+        run: python scripts/check_release.py
+      - name: Lint
+        run: python -m ruff check .
+      - name: Format
+        run: python -m ruff format --check .
+      - name: Types
+        run: python -m mypy src/ntx
+      - name: Tests and coverage
+        run: python -m pytest --cov=ntx --cov-branch --cov-report=term-missing --cov-report=json:coverage.json
+      - name: Coverage gate
+        run: python scripts/coverage_gate.py coverage.json --line 93 --branch 85 --combined 90
+
+  package:
+    name: wheel installs outside the repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build wheel
+        run: |
+          python -m pip install build
+          python -m build --wheel --outdir dist
+      - name: Install in a clean environment
+        run: |
+          python -m venv /tmp/venv
+          /tmp/venv/bin/pip install --no-deps dist/*.whl
+      - name: Run the demo from an unrelated directory
+        run: |
+          mkdir -p /tmp/run
+          cd /tmp/run
+          /tmp/venv/bin/ntx --frozen-time demo --db ntx.db --out reports
+          /tmp/venv/bin/ntx check --db ntx.db
+      - name: Verify deterministic output
+        run: |
+          cd /tmp/run
+          /tmp/venv/bin/ntx --frozen-time demo --db ntx2.db --out reports2 > /tmp/second.txt
+          diff -r reports reports2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheel
+          path: dist/*.whl
+
+  reproducible:
+    name: reproducible wheel and sdist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build twice with a fixed epoch
+        env:
+          SOURCE_DATE_EPOCH: "1794680589"
+        run: |
+          python -m pip install build
+          python -m build --sdist --wheel --outdir dist-a
+          python -m build --sdist --wheel --outdir dist-b
+          python scripts/normalize_sdist.py dist-a/*.tar.gz --epoch 1794680589
+          python scripts/normalize_sdist.py dist-b/*.tar.gz --epoch 1794680589
+          sha256sum dist-a/* dist-b/*
+          diff <(sha256sum dist-a/* | sed 's#dist-a/##') <(sha256sum dist-b/* | sed 's#dist-b/##')
+
+  docker:
+    name: Docker image builds and runs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t ntx:ci .
+      - name: Run demo in container
+        run: docker run --rm ntx:ci --version

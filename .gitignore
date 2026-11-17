@@ -1,0 +1,38 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.json
+htmlcov/
+*.tmp
+*.log
+
+# Build artifacts
+/build/
+/dist/
+/wheels/
+
+# Runtime state (generated, never committed)
+/data/
+/reports/
+*.db
+*.db-journal
+manifests/
+
+# Local environment
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,47 @@
+name: Feature request
+description: Propose a scoped improvement to ntx
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What scientific or operational problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the smallest useful change and its invariants.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include simpler options or reasons not to change the system.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - extraction and normalization
+        - provenance and validation
+        - study appraisal
+        - discovery and synthesis
+        - reporting and API
+        - packaging and CI
+        - documentation
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: This does not require redistributing third-party full text.
+          required: true
+        - label: This does not treat synthetic/model annotations as human gold.
+          required: true

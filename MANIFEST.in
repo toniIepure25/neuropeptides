@@ -1,0 +1,11 @@
+include CHANGELOG.md
+include CITATION.cff
+include CODE_OF_CONDUCT.md
+include CONTRIBUTING.md
+include LICENSE
+include LICENSE-DOCS
+include SECURITY.md
+recursive-include docs *.md
+recursive-include gold *.md *.jsonl *.json *.html
+recursive-include scripts *.py *.ps1
+recursive-include src/ntx/data *.json *.md
