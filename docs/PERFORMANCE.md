@@ -8,6 +8,17 @@ commitments.
 | --- | ---: | ---: | ---: | ---: |
 | Gold-v2 frame, single transaction | 119 | 141 | 0.71 s | ≈169 docs/s |
 | Gold-v2 frame, commit per document (before) | 119 | 141 | 1.26 s | ≈94 docs/s |
+| Bundled demo, five fresh runs | 18 | 14 | see `build/benchmark.json` | descriptive |
+
+Reproduce the demo measurement locally:
+
+```powershell
+python scripts/benchmark.py --runs 5 --out build\benchmark.json
+```
+
+The benchmark writes its Python version, platform, raw timings, median, counts
+and documents per second. It is descriptive only and is not a CI threshold:
+shared runners are too noisy for a meaningful wall-time gate.
 
 The improvement comes from one explicit transaction per `process_documents`
 call: `add_entity`, `add_document`, `add_mentions`, `add_claims` and
