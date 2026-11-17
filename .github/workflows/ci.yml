@@ -68,7 +68,7 @@ jobs:
           cd /tmp/run
           /tmp/venv/bin/ntx --frozen-time demo --db ntx2.db --out reports2 > /tmp/second.txt
           diff -r reports reports2
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: wheel
           path: dist/*.whl
