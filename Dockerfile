@@ -21,4 +21,5 @@ USER ntx
 WORKDIR /home/ntx
 
 # Offline demo from the bundled corpus; deterministic by default.
-CMD ["ntx", "--frozen-time", "demo", "--db", "ntx.db", "--out", "reports"]
+ENTRYPOINT ["ntx"]
+CMD ["--frozen-time", "demo", "--db", "ntx.db", "--out", "reports"]

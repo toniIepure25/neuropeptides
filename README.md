@@ -110,7 +110,7 @@ Every abstract claim stores `doc_id`, `entity_id`, `start`, `end`, `sentence`,
 `direction`, `outcome`, `role` and `design`. The core invariant is:
 
 ```python
-text[claim.start:claim.end] == claim.sentence
+text[claim.start : claim.end] == claim.sentence
 ```
 
 `ntx check` also verifies full-text claims against their immutable snapshot and
