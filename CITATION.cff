@@ -6,7 +6,7 @@ abstract: >-
   neurotrophic and neurotropic mentions in the biomedical literature,
   normalizes them to identifiers, extracts directional claims with exact
   provenance, appraises study design, and mines testable evidence gaps.
-version: 0.17.0
+version: 0.18.0
 date-released: 2026-11-17
 license: MIT
 license-url: https://opensource.org/licenses/MIT

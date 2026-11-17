@@ -467,3 +467,10 @@ when no gold effects exist.
   v2 (new optional fields); database v8, report v4, quality v2 and ledger v3 are
   unchanged. No human gold, new accuracy claim or clinical recommendation is
   introduced.
+- **v18 (0.18.0)** — research-grade hardening: OpenAPI 3.1 contract for every
+  read-only route, property tests for exact spans and redaction/hydration,
+  documentation site and evaluation/limitations pages, CodeQL/Scorecard/dependency
+  review, CycloneDX SBOM and build-provenance attestations. API responses add CSP
+  and cross-origin resource policy. Annotation schema v2, database v8, report v4,
+  quality v2 and ledger export v3 are unchanged. No human gold, accuracy claim or
+  clinical recommendation is introduced.

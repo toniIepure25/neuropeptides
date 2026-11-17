@@ -4,6 +4,43 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.18.0] - 2026-11-17
+
+Research-grade hardening, a public API contract and an attested release path.
+
+### Added
+- `GET /api/v1/openapi.json`: an OpenAPI 3.1 contract for every read-only API
+  route, generated from package metadata and checked against the server route
+  table in CI.
+- `scripts/check_api_contract.py`, `scripts/check_docs_links.py` and
+  `scripts/benchmark.py`.
+- MkDocs Material documentation site with a strict build, new CLI reference,
+  evaluation protocol, limitations page and deployment to GitHub Pages.
+- Fixed-seed property tests for redaction/hydration round-trips, hash tampering,
+  invalid spans and non-mutating redaction.
+- CodeQL, OpenSSF Scorecard, dependency review and Dependabot auto-merge
+  workflows.
+- CycloneDX SBOM, SHA-256 checksums and GitHub build-provenance attestations in
+  the release workflow; attestations are verified before publication.
+- `GOVERNANCE.md`, `ROADMAP.md`, `SUPPORT.md`, `MAINTAINERS.md` and
+  `.github/CODEOWNERS`.
+- Restrictive `Content-Security-Policy` and `Cross-Origin-Resource-Policy`
+  headers on API responses.
+
+### Changed
+- `docs/API.md`, `docs/ARCHITECTURE.md`, `docs/PERFORMANCE.md`,
+  `docs/RELEASE_CHECKLIST.md`, `SECURITY.md` and `README.md` describe the new
+  contract, supply-chain and documentation surfaces.
+- All GitHub Actions are pinned to immutable commit SHAs; major version upgrades
+  are deferred and Dependabot ignores them for this release.
+- The release checklist now requires strict docs, link and API checks plus SBOM
+  and attestation verification.
+
+### Security
+- CodeQL Python analysis, dependency review and OpenSSF Scorecard added.
+- SBOM and provenance attestations added to releases.
+- API response hardening extended with CSP and cross-origin resource policy.
+
 ## [0.17.0] - 2026-11-17
 
 Public-release hardening and the first sanitized open-source distribution.
