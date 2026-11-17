@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or its derived annotations, please cite it as below."
+title: "ntx: provenance-first surveillance and hypothesis triage for neuropeptide and neurotrophic claims"
+abstract: >-
+  A deterministic, offline-capable system that detects neuropeptide,
+  neurotrophic and neurotropic mentions in the biomedical literature,
+  normalizes them to identifiers, extracts directional claims with exact
+  provenance, appraises study design, and mines testable evidence gaps.
+version: 0.17.0
+date-released: 2026-11-17
+license: MIT
+license-url: https://opensource.org/licenses/MIT
+repository-code: https://github.com/toniIepure25/neuropeptides
+url: https://github.com/toniIepure25/neuropeptides
+type: software
+authors:
+  - family-names: Iepure
+    given-names: Antoniu
+    alias: toniIepure25
+keywords:
+  - neuropeptides
+  - neurotrophins
+  - evidence surveillance
+  - provenance
+  - literature mining
+  - reproducibility

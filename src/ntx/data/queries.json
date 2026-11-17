@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "updated": "2026-11-13",
+  "notes": "Query templates. {syn} expands to a quoted OR-ring of the entity synonyms; {design} optionally narrows to study designs.",
+  "default_since": 2015,
+  "templates": {
+    "entity": "({syn}) AND (neuropeptide OR neurotrophic OR neurotropic OR peptide)",
+    "entity_design": "({syn}) AND (randomized OR randomised OR meta-analysis OR cohort OR trial OR animal OR mice OR rat)"
+  },
+  "focus": [
+    {"entity_id": "NP:OXT", "query": "oxytocin", "alias": "oxytocin"},
+    {"entity_id": "NP:NPY", "query": "\"neuropeptide Y\" OR NPY", "alias": "npy"},
+    {"entity_id": "NP:SP", "query": "\"substance P\"", "alias": "substance-p"},
+    {"entity_id": "NTF:BDNF", "query": "\"brain-derived neurotrophic factor\" OR BDNF", "alias": "bdnf"},
+    {"entity_id": "NTS:SEMAX", "query": "Semax", "alias": "semax"}
+  ]
+}

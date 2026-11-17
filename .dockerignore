@@ -1,0 +1,13 @@
+# Build contexts for `docker build`; keep the image small and free of state.
+.git
+.github
+build
+dist
+data
+reports
+*.db
+.venv
+__pycache__
+.mypy_cache
+.ruff_cache
+.pytest_cache

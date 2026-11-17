@@ -1,0 +1,1409 @@
+{
+  "built_at": "2026-11-13T20:00:00+00:00",
+  "compounds": {
+    "BDNF": "BDNF OR \"brain-derived neurotrophic factor\"",
+    "NPY": "\"neuropeptide Y\" OR NPY",
+    "OXT": "\"oxytocin\"",
+    "PEPTIDE_DRUGS": "Semax OR Selank",
+    "SP": "\"substance P\""
+  },
+  "counts": {
+    "corpus_sha256": "b79bcbffad37da36827f9cd6ad9edcbec1dfb105fa202f02115e329e0ed2fb52",
+    "documents": 119,
+    "per_stratum": 8
+  },
+  "documents": [
+    {
+      "compound": "OXT",
+      "content_hash": "7af26422ad1da284cb2aba6bf2593c016686de7a091b1459f752d29a8f82c029",
+      "doc_id": "PMID:42639841",
+      "doi": "10.1002/14651858.cd015995.pub2",
+      "journal": "",
+      "pmid": "42639841",
+      "stratum": "human_trial",
+      "title": "Continuation versus discontinuation of intravenous oxytocin in the active phase of labour.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "9241f6b8a2dd2053328d123aadd0028fab70046795445dd79db001517cd408ad",
+      "doc_id": "PMID:42335670",
+      "doi": "10.1016/j.psyneuen.2026.107915",
+      "journal": "",
+      "pmid": "42335670",
+      "stratum": "human_trial",
+      "title": "Intranasal oxytocin for alcohol use disorder: A systematic review and multilevel, bayesian, and variance meta-analyses of randomized clinical trial data.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "3aa861f697657399441a4103176fce6128db1242811a5b7c0544ab61969ccba8",
+      "doc_id": "PMID:42875396",
+      "doi": "10.1080/14767058.2026.2744004",
+      "journal": "",
+      "pmid": "42875396",
+      "stratum": "human_trial",
+      "title": "Characterizing vaginal misoprostol induction in individuals with and without severe obesity.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "ab519811b42e74c51307b75ccf981357d854d75245002ef858d2dc1b58418b61",
+      "doc_id": "PMID:42716459",
+      "doi": "10.1016/j.pneurobio.2026.102951",
+      "journal": "",
+      "pmid": "42716459",
+      "stratum": "human_trial",
+      "title": "Markers of the maternal oxytocin system and mother-infant bonding during the first postpartum year.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "7b34d34828371bdfb0bdcae5f3157f385a37e16f0a158995ea9d1a2e21712dee",
+      "doc_id": "PMID:42432899",
+      "doi": "10.1097/md.0000000000049662",
+      "journal": "",
+      "pmid": "42432899",
+      "stratum": "human_trial",
+      "title": "Risk factors for episiotomy during vaginal birth: A systematic review and meta-analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "84cf09b4da1f5f732895ac858469f8a5e18b2e336cd8c54972960582a2f26c96",
+      "doc_id": "PMID:42687772",
+      "doi": "10.1111/dom.71292",
+      "journal": "",
+      "pmid": "42687772",
+      "stratum": "human_trial",
+      "title": "Intravenous Oxytocin Does Not Affect Glucose-Regulating Hormones or Markers of Bone Turnover During Graded Glucose Infusion in Healthy Men.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "11d4ad9d6d04f4ef8f8b3b67b4caef0d854e4f432998a079758364508f2ff7d2",
+      "doc_id": "PMID:42480078",
+      "doi": "10.1080/01443615.2026.2697258",
+      "journal": "",
+      "pmid": "42480078",
+      "stratum": "human_trial",
+      "title": "Effect of oral calcium carbonate on uterine contractility: a pilot randomised controlled trial.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "e80d7e7a85fbfb987a4e282d2c56fd4708e4d33dd6de6bbb0f237b5817cb00f6",
+      "doc_id": "PMID:42102921",
+      "doi": "10.1016/j.jogoh.2026.103208",
+      "journal": "",
+      "pmid": "42102921",
+      "stratum": "human_trial",
+      "title": "Carbetocin vs oxytocin for prevention of postpartum hemorrhage in women with obesity undergoing cesarean delivery: A systematic review and meta-analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "0dbbd956229853a96cc8788a3017c8752b10222d141a6380b1841e44e41c58a7",
+      "doc_id": "PMID:42952647",
+      "doi": "10.3389/fnins.2026.1946302",
+      "journal": "",
+      "pmid": "42952647",
+      "stratum": "observational",
+      "title": "Association between peripheral hsa-miR-4456 expression and plasma oxytocin in men with hypersexual disorder and healthy controls: a secondary cross-sectional analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "6b0b28c58ae75c81c788056a06ada893b268418a9e80da148f22f1136cec33b2",
+      "doc_id": "PMID:42739082",
+      "doi": "10.3390/nu18172911",
+      "journal": "",
+      "pmid": "42739082",
+      "stratum": "observational",
+      "title": "Mechanistic Pathways Underlying Breastfeeding Challenges Following Cesarean Delivery: A Systematic Review.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "cd579a228849c3c12a1d1cb2c48ab44a6dfe4db3ddc837ae2feae942e11e5d54",
+      "doc_id": "PMID:42942498",
+      "doi": "10.3390/medicina62101967",
+      "journal": "",
+      "pmid": "42942498",
+      "stratum": "observational",
+      "title": "Prophylactic Carbetocin Versus Oxytocin and Blood Loss After Vaginal Delivery: Agent Selection and Confounding by Indication in a Retrospective Cohort Study.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "be7473321a842f6a0f0a67083932ada85fde3968bd1f3b8b57464525348443eb",
+      "doc_id": "PMID:42883098",
+      "doi": "10.3390/ani16193129",
+      "journal": "",
+      "pmid": "42883098",
+      "stratum": "observational",
+      "title": "Neurobiology of Pet Loss Grief: A Review from a One Health Perspective.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "5710acfbc93d546ac003ae2dbd1cc1e7d7db42e274d003f96c7fc63bd0ac02dd",
+      "doc_id": "DOI:10.12688/f1000research.189341.1",
+      "doi": "10.12688/f1000research.189341.1",
+      "journal": "",
+      "pmid": null,
+      "stratum": "observational",
+      "title": "Recommended and Non-recommended Intrapartum Care Practices among Obstetric Care Providers in Hospitals of Wollega Zones, Oromia, Ethiopia: A Direct Observation Study",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "92d40a202b941f0c6918df80e55647f4d17059c38da3c160f36727ca4b3bcd00",
+      "doc_id": "PMID:42461328",
+      "doi": "10.1007/s11883-026-01447-7",
+      "journal": "",
+      "pmid": "42461328",
+      "stratum": "observational",
+      "title": "Social Isolation, Loneliness and Subclinical Atherosclerosis.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "245368917db038453dd9bc336c80d7b793f200e0234c6a81129d490f82bc7796",
+      "doc_id": "PMID:42676532",
+      "doi": "10.3389/frhs.2026.1886853",
+      "journal": "",
+      "pmid": "42676532",
+      "stratum": "observational",
+      "title": "Clinical and healthcare systems-level interventions for postpartum hemorrhage prevention and management in Nigeria: a systematic review of effectiveness and implementation outcomes.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "39665286cc426bf45a2cf5421f4ee90e373fa3e996bf9bb010431219cf1a232b",
+      "doc_id": "PMID:42799216",
+      "doi": "10.2147/ijwh.s630205",
+      "journal": "",
+      "pmid": "42799216",
+      "stratum": "observational",
+      "title": "Endometrial Preparation Strategies for Frozen Embryo Transfer in Women with Adenomyosis: A Systematic Review of Hormone Replacement Therapy, Gonadotropin-Releasing Hormone Agonist, and Oxytocin Antagonists.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "281d0239f931850e5b334735d6da16cce0414a5444c0427b40abe544b329f089",
+      "doc_id": "PMID:42675575",
+      "doi": "10.1002/dneu.70058",
+      "journal": "",
+      "pmid": "42675575",
+      "stratum": "preclinical",
+      "title": "Oxytocin Affects Barriergenesis in the Blood-Brain Barrier and the Blood-Cerebrospinal Fluid Barrier In Vitro Monoculture Transwell Models.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "3c2e80d83f7637e4383e8b6bcb46d1f8e2d5a82f764d8a5801801662e2886756",
+      "doc_id": "PMID:42876328",
+      "doi": "10.1111/jne.70293",
+      "journal": "",
+      "pmid": "42876328",
+      "stratum": "preclinical",
+      "title": "Opioids and the oxytocin system: Mechanistic interactions altering maternal neuroplasticity.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "df4beb09595ea27043be7435717d99b1653a328c1d5f5f97da37b7e9c8121bd4",
+      "doc_id": "PMID:43014008",
+      "doi": "10.1016/j.theriogenology.2026.118300",
+      "journal": "",
+      "pmid": "43014008",
+      "stratum": "preclinical",
+      "title": "Myometrial cell culture as a new model approach to gain insights into canine dystocia.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "bf442628dfc134ef2a03b8aebdad447e5bb19097b962b776cafa8a34509daa1d",
+      "doc_id": "PMID:42927188",
+      "doi": "10.1016/j.isci.2026.117888",
+      "journal": "",
+      "pmid": "42927188",
+      "stratum": "preclinical",
+      "title": "The smooth muscle titin filament system regulates uterus contractility and implantation.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "1f1c57a0c553ba5cd8f77895cfa22e4048692b121f1ca90a3700e3861b9affb6",
+      "doc_id": "PMID:42988012",
+      "doi": "10.1016/j.brainresbull.2026.112205",
+      "journal": "",
+      "pmid": "42988012",
+      "stratum": "preclinical",
+      "title": "Oxytocin receptor activation enhances SK channel-mediated afterhyperpolarization in MPOA neurons of maternally experienced mice.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "f50600a8f4577ab10c9a40880ce2d1efb98541de9f72c325d60bb2412057aa98",
+      "doc_id": "PMID:42243298",
+      "doi": "10.1038/s41380-026-03663-8",
+      "journal": "",
+      "pmid": "42243298",
+      "stratum": "preclinical",
+      "title": "Efficacy of pharmacological and microbiota-based therapies in preclinical models of autism spectrum disorder: a systematic review.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "46648c13f55668ee9feb078811f42211aed6ff033c75091eb708f97924f4723e",
+      "doc_id": "PMID:42142820",
+      "doi": "10.1016/j.cellsig.2026.112605",
+      "journal": "",
+      "pmid": "42142820",
+      "stratum": "preclinical",
+      "title": "Oxytocin modulates glucose metabolism to protect against cardiac remodeling via the STAT3/eNOS Axis.",
+      "year": 2026
+    },
+    {
+      "compound": "OXT",
+      "content_hash": "d406f3d7f6ea090344aba38d1a64cbe17a00d6b186deefa91c2addb35edcd307",
+      "doc_id": "PMID:42567943",
+      "doi": "10.1038/s41583-026-01073-x",
+      "journal": "",
+      "pmid": "42567943",
+      "stratum": "preclinical",
+      "title": "Neural circuits for mammalian parental behaviour.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "4bea946f23348799a64843a6abf92973b384c54615d3b56bfd728c2192b6e186",
+      "doc_id": "PMID:36134465",
+      "doi": "10.1039/d2fo00983h",
+      "journal": "",
+      "pmid": "36134465",
+      "stratum": "human_trial",
+      "title": "Effects of decaffeinated green coffee extract supplementation on anthropometric indices, blood glucose, leptin, adiponectin and neuropeptide Y (NPY) in breast cancer survivors: a randomized clinical trial.",
+      "year": 2022
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "f5d9eb13eb63b92b07ef31acb1ad0d332935aa88351ff3886d573958dc3952bd",
+      "doc_id": "PMID:42688078",
+      "doi": "10.3389/fimmu.2026.1889366",
+      "journal": "",
+      "pmid": "42688078",
+      "stratum": "human_trial",
+      "title": "Biomarker evidence for the pathophysiological mechanisms of insomnia: a systematic review and meta-analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "ec989dcb44d1b3ee1fcae6ee2836914d9e441b623791da05f2416c85716d4956",
+      "doc_id": "PMID:42835252",
+      "doi": "10.3389/fnagi.2026.1888512",
+      "journal": "",
+      "pmid": "42835252",
+      "stratum": "human_trial",
+      "title": "Neuropeptide Y and brain ageing: an updated scoping review on the role of autophagy.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "420258f5d15368e69d835975f41d3b1a3589f87a3a93f2d9c1a0954c2c946977",
+      "doc_id": "PMID:42829171",
+      "doi": "10.1016/j.molmet.2026.102452",
+      "journal": "",
+      "pmid": "42829171",
+      "stratum": "human_trial",
+      "title": "Nisotirostide (LY3457263), a novel NPY2 receptor agonist for type 2 diabetes and obesity: From discovery to clinical proof of concept.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "c9462618a27daf73d8af3ba6a181236bcf204bf5beb8336bcda3418c21b1ecba",
+      "doc_id": "PMID:42117145",
+      "doi": "10.3346/jkms.2026.41.e44",
+      "journal": "",
+      "pmid": "42117145",
+      "stratum": "human_trial",
+      "title": "Limited Impact of Sodium-Glucose Cotransporter-2 Inhibitors on Appetite and Body Weight: Evidence From Clinical and Rodent Studies.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "faa3fe818749231ae0204bdf1c14c5b9b0ef0804e9ce3670794b678a1cc95cf1",
+      "doc_id": "PMID:42056954",
+      "doi": "10.1186/s12903-026-08438-9",
+      "journal": "",
+      "pmid": "42056954",
+      "stratum": "human_trial",
+      "title": "Neural biomarkers in pulpitis and their associations with inflammation and pain perception: a systematic review and meta-analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "a7f50ce3cb0cd5324983022c75d47a389b3e413c093476c2325a8a7039f86f7c",
+      "doc_id": "PMID:40964781",
+      "doi": "10.5414/cp204733",
+      "journal": "",
+      "pmid": "40964781",
+      "stratum": "human_trial",
+      "title": "Analgesia using sufentanil and sufentanil plus dexmedetomidine following cesarean section and effect on placental hypoxia-inducible factors.",
+      "year": 2025
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "75b0f7234101605bbc437ab1bc5e0c42551f0f845911738a5d28bda1f0a25cdb",
+      "doc_id": "PMID:41987434",
+      "doi": "10.13703/j.0255-2930.20241213-k0002",
+      "journal": "",
+      "pmid": "41987434",
+      "stratum": "human_trial",
+      "title": "[Clinical efficacy of abdominal acupuncture therapy combined with transcranial direct current stimulation on post-stroke depression and the influence on the levels of autophagy-related proteins].",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "2a4518bbd69a2276991ddbf1f7da56329597abae71cb68599dac8c7c702eca46",
+      "doc_id": "PMID:42940763",
+      "doi": "10.3390/children13101445",
+      "journal": "",
+      "pmid": "42940763",
+      "stratum": "observational",
+      "title": "Serum Neuropeptide Y and Ghrelin in Female Adolescents Exposed to Childhood Sexual Abuse with and Without Post-Traumatic Stress Disorder.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "33d8fff0c8bebc03a34846d45c4b528ac4bff6c7176b6d80723be9a42e210509",
+      "doc_id": "PMID:42423430",
+      "doi": "10.1080/15569527.2026.2701310",
+      "journal": "",
+      "pmid": "42423430",
+      "stratum": "observational",
+      "title": "Serum calcitonin gene-related peptide and neuropeptide Y levels in seborrheic dermatitis: comparison with healthy controls and correlation with disease severity.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "27cc5b5f2ea5361d8190ad74428b56f6b150ebbe15cd28dc5ecc44212525255f",
+      "doc_id": "PMID:42098897",
+      "doi": "10.1017/neu.2026.10084",
+      "journal": "",
+      "pmid": "42098897",
+      "stratum": "observational",
+      "title": "Age-dependent increase in peripheral neuropeptide Y with no cross-sectional link to depression.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "e184c44153161f53f7f8368f08e3753e3d23b5c4f9c6fa15a45ed0efebfa0db3",
+      "doc_id": "PMID:42761406",
+      "doi": "10.3389/fpain.2026.1884062",
+      "journal": "",
+      "pmid": "42761406",
+      "stratum": "observational",
+      "title": "Neuropeptide Y signaling in osteoarthritis pain: neuroimmune mechanisms, joint remodeling, and translational opportunities.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "8ce4e5667c6ededf8b29aece4710fa5e47c5b92c1e27e57800647b2b404a0577",
+      "doc_id": "PMID:42396611",
+      "doi": "10.1177/10732748261465284",
+      "journal": "",
+      "pmid": "42396611",
+      "stratum": "observational",
+      "title": "Prevalence and Determinants of Female Sexual Dysfunction, and Its Association With Neurotrophic Biomarkers in Gynaecological Cancer Survivors: A Cross-Sectional Study.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "ae96c4332feb551cdac5a2ee25b8740b1b7698f39c3d0ef13f261b1e42bfc86f",
+      "doc_id": "PMID:42242043",
+      "doi": "10.1016/j.tice.2026.103665",
+      "journal": "",
+      "pmid": "42242043",
+      "stratum": "observational",
+      "title": "Neuropeptide Y-immunoreactive neurons of the rat large intestine during development.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "c4668f927e06dd1a2acf46abd56778e3d96c4f5372aaea2b827caeb41bea3018",
+      "doc_id": "PMID:42223042",
+      "doi": "10.4168/aair.2026.18.3.453",
+      "journal": "",
+      "pmid": "42223042",
+      "stratum": "observational",
+      "title": "Serum Neuropeptides in Chronic Spontaneous Urticaria: Associations With Disease Activity and Clinical Phenotypes.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "3a619d6dcd57d87851419f7f4252e7c372f211b92aa83c2dcb1ea422d3ad1309",
+      "doc_id": "PMID:41935312",
+      "doi": "10.1186/s10194-026-02344-9",
+      "journal": "",
+      "pmid": "41935312",
+      "stratum": "observational",
+      "title": "Migraine in pediatric population: the role of biochemical markers.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "8f797fe55ba75d2079e2c2fdf147e6ba7d105fc4a0401284b2d64d5f53e3e2a9",
+      "doc_id": "PMID:42591487",
+      "doi": "10.3389/fcell.2026.1909565",
+      "journal": "",
+      "pmid": "42591487",
+      "stratum": "preclinical",
+      "title": "Dynamic regulation of hypothalamic NPY2R-positive primary cilia by nutritional states.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "22b8b3dff9d7b6a4689c3b26a11885c1100df7766908e687de4b833d13dc4dea",
+      "doc_id": "PMID:42811065",
+      "doi": "10.1038/s41467-026-77654-2",
+      "journal": "",
+      "pmid": "42811065",
+      "stratum": "preclinical",
+      "title": "Pulsed electromagnetic fields activate a peripheral interoceptive pathway to suppress sympathetic Npy for osteogenesis.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "306c8553daa4a3be11a4f71ca2d3c3dd6bb49fcf789e9ae78a6de7232dbb8588",
+      "doc_id": "PMID:42913319",
+      "doi": "10.1016/j.neurot.2026.e01100",
+      "journal": "",
+      "pmid": "42913319",
+      "stratum": "preclinical",
+      "title": "Intranasal neuropeptide Y suppresses food intake, reduces sucrose preference and increases circulating corticosterone in obese mice.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "b644d8127cb3b2e8f734c76dafec30cd3a5eec5f7847ae0cbf386837009c8d64",
+      "doc_id": "PMID:42655870",
+      "doi": "10.1111/exd.70354",
+      "journal": "",
+      "pmid": "42655870",
+      "stratum": "preclinical",
+      "title": "DPP4 Substrate Supplementation Protects From WNT-Induced Lipid Depletion in Dermal Adipocytes.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "b677b6c4cc8f92c5daa29ec761996f4183481cc494e3007b0479ef4aa4234ade",
+      "doc_id": "PMID:42733213",
+      "doi": "10.1111/jne.70265",
+      "journal": "",
+      "pmid": "42733213",
+      "stratum": "preclinical",
+      "title": "Intracerebroventricular injection of neuropeptide Y suppresses luteinizing hormone pulses in mice.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "c823147cf1fc293841d9f6ec862b514c6725cee0b45be1a43f270eb5953cf1f2",
+      "doc_id": "PMID:42820016",
+      "doi": "10.1155/jnme/8893700",
+      "journal": "",
+      "pmid": "42820016",
+      "stratum": "preclinical",
+      "title": "<i>In Vitro</i> and <i>In Vivo</i> Antidiabetic Effects of <i>Cratoxylum formosum</i> Leaf Extract in Low-Dose Streptozotocin- and High-Fat Diet-Induced Diabetic Mice.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "01327a36b40b00118714e8a1b3cb7ab49531407ed0b4a2b12377e2baa5368cd5",
+      "doc_id": "PMID:42472403",
+      "doi": "10.1007/s10238-026-02253-w",
+      "journal": "",
+      "pmid": "42472403",
+      "stratum": "preclinical",
+      "title": "Neuropeptide Y promotes myocardial fibrosis post myocardial infarction reperfusion through Neuropeptide Y receptor type 1.",
+      "year": 2026
+    },
+    {
+      "compound": "NPY",
+      "content_hash": "49438d34d11c69c351c80640fdeda2f933764d9631ce7569ab069b93e88ab34a",
+      "doc_id": "PMID:42535973",
+      "doi": "10.1002/advs.76608",
+      "journal": "",
+      "pmid": "42535973",
+      "stratum": "preclinical",
+      "title": "Neuropeptide Y-Graphene Oxide Complexes Inhibit Amygdala NPY-Receptor Expressing Glutamatergic Pathways and Selectively Remove Aversive Memory In Vivo.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "ce8b09e24cc1afb5c8adfe886b0f2099c5a9dd06ae56bf6aa2eb7988562a781d",
+      "doc_id": "PMID:42662276",
+      "doi": "10.1155/da/9538518",
+      "journal": "",
+      "pmid": "42662276",
+      "stratum": "human_trial",
+      "title": "Depression, Nutritional Status, and Substance P/NK-1R Biomarkers in Dysmenorrhea: A Randomized Crossover Trial.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "db94cd3bd07aa021673b62ba5be6cca0c4fe57f91842084841f7e146c3757134",
+      "doc_id": "PMID:40369974",
+      "doi": "10.1177/03331024251336132",
+      "journal": "",
+      "pmid": "40369974",
+      "stratum": "human_trial",
+      "title": "Effects of substance P on headache induction and arterial dilation in healthy adults.",
+      "year": 2025
+    },
+    {
+      "compound": "SP",
+      "content_hash": "18fdcd2373893acf738e07e8b07069596d355fd471859a1a4ed05874c0cbd9c5",
+      "doc_id": "PMID:40533695",
+      "doi": "10.1007/s10266-025-01131-3",
+      "journal": "",
+      "pmid": "40533695",
+      "stratum": "human_trial",
+      "title": "The impact of using cold irrigation on postoperative endodontic pain and substance P level: a randomized clinical trial.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "87922a4ebb0e94885b97e56fa6ed7dc79d056f9ec74a5ae415ebb3e7457a67df",
+      "doc_id": "PMID:40436210",
+      "doi": "10.1016/j.ctim.2025.103187",
+      "journal": "",
+      "pmid": "40436210",
+      "stratum": "human_trial",
+      "title": "The efficacy of moxibustion on the pressure pain threshold and substance P / leukotriene B4 contents in serum to patients with rheumatoid arthritis.",
+      "year": 2025
+    },
+    {
+      "compound": "SP",
+      "content_hash": "90a55c7845e8305d36f55722fceced0a3c9fc3a001b66b40b64df01e4c100a88",
+      "doc_id": "PMID:38880787",
+      "doi": "10.1038/s41598-024-64071-y",
+      "journal": "",
+      "pmid": "38880787",
+      "stratum": "human_trial",
+      "title": "The influence of intraoral cryotherapy on postoperative pain and substance P in symptomatic apical periodontitis: randomized clinical study.",
+      "year": 2024
+    },
+    {
+      "compound": "SP",
+      "content_hash": "06328e6db825a9b3768365fbb73b48ac7ccd3aa6a9936a942028736815a3b330",
+      "doc_id": "PMID:38233887",
+      "doi": "10.1186/s12903-024-03882-x",
+      "journal": "",
+      "pmid": "38233887",
+      "stratum": "human_trial",
+      "title": "Can instrumentation kinematics affect postoperative pain and substance P levels? A randomized controlled trial.",
+      "year": 2024
+    },
+    {
+      "compound": "SP",
+      "content_hash": "112ce88aa9c93bd3b153a1efc13b347ce357a27973d3404a1dd7e3f311860a9b",
+      "doc_id": "PMID:35355772",
+      "doi": "10.22092/ari.2021.356171.1797",
+      "journal": "",
+      "pmid": "35355772",
+      "stratum": "human_trial",
+      "title": "Clinical Applications of Substance P (Neurokinin-1 Receptor) Antagonist in Canine Medicine.",
+      "year": 2021
+    },
+    {
+      "compound": "SP",
+      "content_hash": "9c3bfaec7a18a374e24f903b59e5ecf95c7719deb81de6772157d1d88b858da3",
+      "doc_id": "PMID:35717202",
+      "doi": "10.1186/s12917-022-03304-6",
+      "journal": "",
+      "pmid": "35717202",
+      "stratum": "human_trial",
+      "title": "Substance P concentrations in the blood plasma and serum of adult cattle and calves during different painful procedures and conditions - a systematic review.",
+      "year": 2022
+    },
+    {
+      "compound": "SP",
+      "content_hash": "ea6b95c270b2203434c2de2b8196bac731e662348224bbc3c67ce3543ea20b9f",
+      "doc_id": "PMID:42828541",
+      "doi": "10.1007/s00455-026-10995-8",
+      "journal": "",
+      "pmid": "42828541",
+      "stratum": "observational",
+      "title": "The Role of Saliva in Swallowing: A Systematic Review.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "6431aa847a48a046faf81b31b18edbaa17d5899563351eda213f6bf5f4b80681",
+      "doc_id": "PMID:42074836",
+      "doi": "10.3390/jcm15083036",
+      "journal": "",
+      "pmid": "42074836",
+      "stratum": "observational",
+      "title": "The Skin-Brain-Exposome Axis in Stress-Sensitive Dermatoses: A Narrative Review.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "217975bd679e83c59797fa8489ef1324a5fc5c8868bc46c524ceb10f1cc9168a",
+      "doc_id": "PMID:42797049",
+      "doi": "10.3390/nu18183064",
+      "journal": "",
+      "pmid": "42797049",
+      "stratum": "observational",
+      "title": "The Role of Diet in Functional Dyspepsia.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "e9ff2c4c710f163be1ba3a11b48d4a1d6b70a2ba2b2d02d8bf170d247d0a6849",
+      "doc_id": "PMID:42808450",
+      "doi": "10.1111/exd.70369",
+      "journal": "",
+      "pmid": "42808450",
+      "stratum": "observational",
+      "title": "Chronic Spontaneous Urticaria and Psychiatric Symptoms: The Blood-Brain Barrier Hypothesis.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "bbff0d60b54c7dcc6c7808939451a37f8800f1cd82cdd591a56f3a10f982d4cc",
+      "doc_id": "PMID:42477737",
+      "doi": "10.1186/s41927-026-00677-1",
+      "journal": "",
+      "pmid": "42477737",
+      "stratum": "observational",
+      "title": "Inflammatory biomarker alterations in patients with fibromyalgia: a systematic review and meta-analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "0907c270084bd5e63562731ca0ec594f74ea7a881e3e124f4b77fce0dda5b563",
+      "doc_id": "PMID:42654478",
+      "doi": "10.3390/medicina62081581",
+      "journal": "",
+      "pmid": "42654478",
+      "stratum": "observational",
+      "title": "Sensory Abnormalities and Pain in the Donor Sites of Radial Forearm and Fibula Free Flaps-A Systematic Review.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "693cf5d31f204cf3fdd2aaa43e8f33f10b793480009b877db36602a507d98bb6",
+      "doc_id": "PMID:42075534",
+      "doi": "10.3390/medicina62040662",
+      "journal": "",
+      "pmid": "42075534",
+      "stratum": "observational",
+      "title": "The Association of Periodontitis with Circadian Rhythm Disorders and Sleep-A Scoping Review.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "01ab6b85e545423d418523364038b49b4c2bf54858cb495c81a3625de77707c4",
+      "doc_id": "PMID:42760961",
+      "doi": "10.3389/fmed.2026.1929287",
+      "journal": "",
+      "pmid": "42760961",
+      "stratum": "observational",
+      "title": "Associations of tear mediators with ocular surface symptoms, signs, and corneal nerve morphology in dry eye disease: a cross-sectional study.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "e6149a7d381e7a6b59451ade887aaaa8b34534e1379111301f4965e4c44a67f9",
+      "doc_id": "PMID:42957225",
+      "doi": "10.21873/invivo.14497",
+      "journal": "",
+      "pmid": "42957225",
+      "stratum": "preclinical",
+      "title": "Macrophage-derived Exosomes Regulate Neuronal ACSL6 in Experimental Temporomandibular Disorder Pain.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "1d0e5943230d61867bbeeba887ffe97cc79158de5349e8b71f9f552477292f38",
+      "doc_id": "PMID:42931518",
+      "doi": "10.3390/toxins18100427",
+      "journal": "",
+      "pmid": "42931518",
+      "stratum": "preclinical",
+      "title": "On the Study of Botulinum Toxin A Actions: Beyond the Neuromodulation Induced by SNAP-25 Cleavage.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "ceb24860e5927c91bf4923b535f927028425e5bda70fc140fc523f61536f2ab5",
+      "doc_id": "PMID:42678742",
+      "doi": "10.1172/jci.insight.205826",
+      "journal": "",
+      "pmid": "42678742",
+      "stratum": "preclinical",
+      "title": "Substance P-NK1R signaling of keratinocytes initiates the skin inflammatory environment required for allergic contact dermatitis.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "daaaf26bffdb6e2a1d17f6c8420e2bec8f801a0ac2458bdbf0f7d1a07609e9f5",
+      "doc_id": "PMID:42177541",
+      "doi": "10.1186/s12967-026-08285-w",
+      "journal": "",
+      "pmid": "42177541",
+      "stratum": "preclinical",
+      "title": "Mast cell-specific receptor MrgprB2 selectively mediates oxaliplatin-induced neuropathic pain.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "15a35e16b94aba05f1b03cf4b28b37baca4de6b2477ded2dc332854a97c4da4a",
+      "doc_id": "PMID:42703581",
+      "doi": "10.3389/ftox.2026.1870419",
+      "journal": "",
+      "pmid": "42703581",
+      "stratum": "preclinical",
+      "title": "A TRPA1-mediated substance P release assay as an <i>in vitro</i> screening tool for airway irritant potential.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "2b68bc09399313378729998435c24a94410bc3ed6eff4d8bf05c847a12e9aa57",
+      "doc_id": "PMID:42831692",
+      "doi": "10.1096/fj.202600274r",
+      "journal": "",
+      "pmid": "42831692",
+      "stratum": "preclinical",
+      "title": "Hypoxia Combined With Substance P Pretreatment of ADSC-Exos Promotes Recruitment and Differentiation of EPCs by Activating YAP/TEAD3 to Treat Diabetic Foot Ulcer.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "46c2dfbd15cd110c0dc4f8fb33108e30aa40f5fbf4e5cb4ea924a96489cf511a",
+      "doc_id": "PMID:42932923",
+      "doi": "10.1152/ajplung.90014.2026",
+      "journal": "",
+      "pmid": "42932923",
+      "stratum": "preclinical",
+      "title": "Substance P in the Neural Control of Breathing.",
+      "year": 2026
+    },
+    {
+      "compound": "SP",
+      "content_hash": "750968125e5d0e1b53f994590f9b6f544b3673bcef5074ba1a5c33627dcf6ab8",
+      "doc_id": "PMID:43005458",
+      "doi": "10.34133/bmr.0443",
+      "journal": "",
+      "pmid": "43005458",
+      "stratum": "preclinical",
+      "title": "A Chitosan-Based Neuropeptide Hydrogel with Zinc Oxide-Assisted Antioxidant Activity for Ultraviolet B-Induced Delayed Wound Repair.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "d6e39616af60f4ab6f17471429e3c94419b022e3717d75b20425a817e6981504",
+      "doc_id": "PMID:42928306",
+      "doi": "10.1007/s12035-026-06272-2",
+      "journal": "",
+      "pmid": "42928306",
+      "stratum": "human_trial",
+      "title": "Dose-Response Effects of Exercise Training on Circulating Brain-Derived Neurotrophic Factor (BDNF): A Systematic Review and Meta-analysis of Randomised Controlled Trials.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "51473b26a2f6a1a095faf70b6d630c480ee3e7007a276aa1884e908a09951336",
+      "doc_id": "PMID:42951347",
+      "doi": "10.1111/ggi.70863",
+      "journal": "",
+      "pmid": "42951347",
+      "stratum": "human_trial",
+      "title": "The Effects of Mind-Body Exercise on Cognitive Function and Peripheral Blood BDNF in Elderly People With Mild Cognitive Impairment: A Systematic Review and Meta-Analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "3436fdabe911779e3f41cd6ee33590e7de756d284143bc2af042a8bb016335d5",
+      "doc_id": "PMID:42845970",
+      "doi": "10.3389/fneur.2026.1958266",
+      "journal": "",
+      "pmid": "42845970",
+      "stratum": "human_trial",
+      "title": "Circulating BDNF in pediatric neurodevelopmental disorders: a meta-analysis of case-control differences and cognitive severity.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "3d89056d84573f08618c1bddc10e4a1042a98e7252e8e39af1286a77231ec4cc",
+      "doc_id": "PMID:42743156",
+      "doi": "10.1152/ajpendo.00125.2026",
+      "journal": "",
+      "pmid": "42743156",
+      "stratum": "human_trial",
+      "title": "Exploring the role of brain-derived neurotrophic factor as a biomarker in female infertility: a systematic review and meta-analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "cf95a6fa9ce1723ff1d50a32f3f218f80a741e3d7a17feb8aebea66d0b8811e5",
+      "doc_id": "PMID:42678372",
+      "doi": "10.1093/gerona/glag216",
+      "journal": "",
+      "pmid": "42678372",
+      "stratum": "human_trial",
+      "title": "Effects of resistance training sets on cognition and brain-derived neurotrophic factor in cognitively impaired individuals: a quasi-experimental study.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "e8067ed28fb5aef53f0a22b1200f8a3ceb01b74695e118807e241bc32fde550e",
+      "doc_id": "PMID:42896910",
+      "doi": "10.7570/jomes25075",
+      "journal": "",
+      "pmid": "42896910",
+      "stratum": "human_trial",
+      "title": "Effects of Different Exercise Modalities on Interleukin-6, Brain-Derived Neurotrophic Factor, and Cognitive Function in Obese Older Women.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "e89d7bc7f03db5ef07e169ed4cdc7eacae932a30bc4964dae64f398df07f0b90",
+      "doc_id": "PMID:42842530",
+      "doi": "10.1371/journal.pone.0358178",
+      "journal": "",
+      "pmid": "42842530",
+      "stratum": "human_trial",
+      "title": "Dose- and modality-specific effects of exercise on BDNF and depression in middle-aged and older adults with mild cognitive impairment: A Bayesian network meta-analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "ecc03d7a8cc514866e980980fb7e530448977370aa16a643e40489ae934760f0",
+      "doc_id": "PMID:42932907",
+      "doi": "10.1152/ajpregu.00240.2026",
+      "journal": "",
+      "pmid": "42932907",
+      "stratum": "human_trial",
+      "title": "Effects of 24-h sleep deprivation on circulating irisin, BDNF, and soluble klotho responses during exercise in the heat in young and older males.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "9383ae11c754b7748f1affa3916ed5ae76e0976c6f3f7844762f70f5d2aca2d1",
+      "doc_id": "PMID:42922219",
+      "doi": "10.7417/ct.2026.2150",
+      "journal": "",
+      "pmid": "42922219",
+      "stratum": "observational",
+      "title": "Evaluation of surrogate biomarkers of memory and cognition in aging adults with vitamin B12 deficiency: A cross-sectional study.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "6addaba436f3c846b9d058e0e0904d7783232352213b8ddcb38d645e7752af9f",
+      "doc_id": "PMID:42953803",
+      "doi": "10.2147/jpr.s634240",
+      "journal": "",
+      "pmid": "42953803",
+      "stratum": "observational",
+      "title": "Associations of Preoperative Cerebrospinal Fluid Acetylcholine, BDNF, and IL-1\u03b2 with Acute Postoperative Pain Across Educational Strata.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "3a496debdad26b52e2be11535509c8eb7b1b5a8c526c499d590c5e3e38cd594e",
+      "doc_id": "PMID:42829215",
+      "doi": "10.1136/bmjpo-2026-005159",
+      "journal": "",
+      "pmid": "42829215",
+      "stratum": "observational",
+      "title": "MIND-T1D: study protocol for a multidimensional neurocognitive and psychological assessment of Indian children and young adults with type 1 diabetes.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "a505f005f3b4822627818fc83cbbd8d40116d6b17d918d22bd94b5243d363178",
+      "doc_id": "PMID:42956334",
+      "doi": "10.1097/ijg.0000000000002803",
+      "journal": "",
+      "pmid": "42956334",
+      "stratum": "observational",
+      "title": "The Associations of Plasma Brain-derived Neurotrophic Factor with Macular Structure and Visual Function in Open-angle Glaucoma: A Cross-sectional Study.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "9d34d6a5c952a8577f40c472412f17172f05c798182688546038b3a800c4ecfa",
+      "doc_id": "PMID:42828579",
+      "doi": "10.1007/s12975-026-01500-2",
+      "journal": "",
+      "pmid": "42828579",
+      "stratum": "observational",
+      "title": "Brain-Derived Neurotrophic Factor Val66Met Polymorphism and Cognitive Outcome after Stroke: A Systematic Review.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "63b45d22143698e5f8bb2a21a99bde5148d187707cbf744e2466df92cfc6597d",
+      "doc_id": "PMID:42664126",
+      "doi": "10.7417/ct.2026.2106",
+      "journal": "",
+      "pmid": "42664126",
+      "stratum": "observational",
+      "title": "Association of Vitamin D Status with Neurobiological Biomarkers in Healthy Elderly Population.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "ea9e7a6e4d0aa3887ad5c44c125cd39961d28663ff15843278cba65c4cfa429a",
+      "doc_id": "PMID:42547717",
+      "doi": "10.1007/s10266-026-01526-w",
+      "journal": "",
+      "pmid": "42547717",
+      "stratum": "observational",
+      "title": "Changes in salivary brain-derived neurotrophic factor following a standardized eating task in community-dwelling older adults: a cross-sectional study.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "04df64b8ddb91f7fc4c2812825a9cc29d121e2155a3e08cbefd5508e7d1f2cee",
+      "doc_id": "PMID:42340775",
+      "doi": "10.7417/ct.2026.2068",
+      "journal": "",
+      "pmid": "42340775",
+      "stratum": "observational",
+      "title": "Cognitive and Memory Decline in Thyroid Disorders: A Biomarker Based Cross Sectional Study in Aging Adults.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "5feea2c79bd3795c2f5786797bd063c4f3beece0b450202eed25fe40a91662a7",
+      "doc_id": "PMID:42805569",
+      "doi": "10.1016/j.taap.2026.118064",
+      "journal": "",
+      "pmid": "42805569",
+      "stratum": "preclinical",
+      "title": "Tuberostemonine produces antidepressant effects via the BDNF/TrkB/Erk/CREB signaling pathway.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "6bc8f8ef264faf3884ca3f534d7d34b93c8ae69752c296739b050115164d6339",
+      "doc_id": "PMID:42831040",
+      "doi": "10.1016/j.isci.2026.116658",
+      "journal": "",
+      "pmid": "42831040",
+      "stratum": "preclinical",
+      "title": "Brain-derived neurotrophic factor in diabetes: A promising target for cognitive restoration.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "7f07ee2e832e54b06ee0897152027119d96b71cb957a8bcda650e69af4ba73b0",
+      "doc_id": "PMID:42884630",
+      "doi": "10.3390/nu18193179",
+      "journal": "",
+      "pmid": "42884630",
+      "stratum": "preclinical",
+      "title": "Blood-Brain Barrier (BBB)-Permeable Ethanolamine-Type Plasmalogens 18:0/20:4 (PE-PLS 18:0/20:4) Ameliorate Cognitive Impairments in Aged Mice.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "023897ff40c9935c0f72fbb0bf81979002d61312ffd05c1ba34a2722c3207a36",
+      "doc_id": "PMID:42994771",
+      "doi": "10.1016/j.physbeh.2026.115564",
+      "journal": "",
+      "pmid": "42994771",
+      "stratum": "preclinical",
+      "title": "Impact of Combined Chronic Stress and REM Sleep Deprivation on Memory Function and Hippocampal BDNF Protein Content in Wistar Rats.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "22baf3e4db0f75780255f601aeb55c4a3b695aba4711ea8eb7903852559880cc",
+      "doc_id": "PMID:42571789",
+      "doi": "10.1016/j.expneurol.2026.115954",
+      "journal": "",
+      "pmid": "42571789",
+      "stratum": "preclinical",
+      "title": "Enhanced therapeutic effect of intracavitary mesenchymal stromal cell administration with alginate scaffold in acute intracerebral hemorrhage model rat after hematoma aspiration.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "fa9b8d3bb79473fcb9856dad35b388c6c435ba3bde472cd723189818e8f5e2df",
+      "doc_id": "PMID:42961474",
+      "doi": "10.1007/s00221-026-07427-2",
+      "journal": "",
+      "pmid": "42961474",
+      "stratum": "preclinical",
+      "title": "Neuroinflammatory and synaptic mechanisms underlying cisplatin neurotoxicity in the cerebrum and hippocampus: roles of oxidative stress and BDNF, NMDAR2B, p-Tau, and Akt/GSK3\u03b2 signaling.",
+      "year": 2026
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "58e734a7eb99afe6e136e90451bfef73eb7a866e18479cb14d6a634e832aa8b6",
+      "doc_id": "PMID:42838182",
+      "doi": "10.1016/j.physbeh.2026.115530",
+      "journal": "",
+      "pmid": "42838182",
+      "stratum": "preclinical",
+      "title": "Environmental enrichment differentially suppresses anxiety-related behaviors, reduces passive avoidance learning, and upregulates hippocampal brain-derived neurotrophic factor expression in high- and low-avoidance Hatano rats.",
+      "year": 2027
+    },
+    {
+      "compound": "BDNF",
+      "content_hash": "180db653832af93d2b4f2d47f3ec46093c8a169b8b889de966110395e9c0627c",
+      "doc_id": "PMID:42242491",
+      "doi": "10.1016/j.ejphar.2026.179051",
+      "journal": "",
+      "pmid": "42242491",
+      "stratum": "preclinical",
+      "title": "D-Amino acid oxidase inhibitor ameliorates cerebral ischemia-reperfusion injury in rats via D-Serine/GluN2A/BDNF signaling pathway.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "5ca0a7975d6f29f6c5a784ed32cc9a2371287e66e4e9c37d42e3b5c158b34ed6",
+      "doc_id": "PMID:40913215",
+      "doi": "10.1007/s10439-025-03818-8",
+      "journal": "",
+      "pmid": "40913215",
+      "stratum": "human_trial",
+      "title": "Advances in Musculoskeletal Modeling of the Thoraco-Lumbar Spine: A Comprehensive Systematic Review.",
+      "year": 2025
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "f15542a9e38f8b1297d9c6ced84fd35fc8ba8d47f7472e01c05a1b5a7545fe16",
+      "doc_id": "PMID:26356395",
+      "doi": "10.17116/jnevro20151156133-40",
+      "journal": "",
+      "pmid": "26356395",
+      "stratum": "human_trial",
+      "title": "[Optimization of the treatment of anxiety disorders with selank].",
+      "year": 2015
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "e7b890e1ba06d64db02b6fd709c6fac8ef94adc2f6535a81c96a159df6f09d49",
+      "doc_id": "PMID:34834147",
+      "doi": "10.3390/molecules26227053",
+      "journal": "",
+      "pmid": "34834147",
+      "stratum": "human_trial",
+      "title": "Peptide Regulation of Gene Expression: A Systematic Review.",
+      "year": 2021
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "53e2e8a9f884a00974f4afb1aa160208a799fac11dcfc5211a005204f430997a",
+      "doc_id": "PMID:18454096",
+      "doi": null,
+      "journal": "",
+      "pmid": "18454096",
+      "stratum": "human_trial",
+      "title": "[Efficacy and possible mechanisms of action of a new peptide anxiolytic selank in the therapy of generalized anxiety disorders and neurasthenia].",
+      "year": 2008
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "b9ec3a41a3d2d68aa78a531260e379514d140fc042b93caeef4e1ce159633e0a",
+      "doc_id": "PMID:18379501",
+      "doi": null,
+      "journal": "",
+      "pmid": "18379501",
+      "stratum": "human_trial",
+      "title": "[The study of chronic partial denervation and quality of life in patients with motor neuron disease treated with semax].",
+      "year": 2007
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "5befba195b5b861c431001d861e0c3ba40e3679697b5ee4f4436927087643e54",
+      "doc_id": "PMID:32570722",
+      "doi": "10.3390/medicina56060300",
+      "journal": "",
+      "pmid": "32570722",
+      "stratum": "human_trial",
+      "title": "B-Cell Lymphoma 2 (Bcl-2) and Regulation of Apoptosis after Traumatic Brain Injury: A Clinical Perspective.",
+      "year": 2020
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "0ae185ef8c4eee187c2534c90448e2ec14bf60acb20f236d3d5f822b12ce36cb",
+      "doc_id": "PMID:3190993",
+      "doi": "10.1111/j.1365-2125.1988.tb03402.x",
+      "journal": "",
+      "pmid": "3190993",
+      "stratum": "human_trial",
+      "title": "Relationship between plasma oxipurinol concentrations and xanthine oxidase activity in volunteers dosed with allopurinol.",
+      "year": 1988
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "5e6d164d639184419109d8452cf2ba2528ec8826178d366e1e38bce42e2148d0",
+      "doc_id": "DOI:10.20944/preprints202609.2396.v1",
+      "doi": "10.20944/preprints202609.2396.v1",
+      "journal": "",
+      "pmid": null,
+      "stratum": "observational",
+      "title": "Increasing Direct-to-Consumer Use of Semax and Selank Peptides Decoded from LLM-Curated Clinical Notes and Physician Adjudication",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "e4343b0d0c946bf0ade293113096e1fd57daf6acef5d19ae157109ca6b4e97f6",
+      "doc_id": "PMID:42437212",
+      "doi": "10.7759/cureus.110657",
+      "journal": "",
+      "pmid": "42437212",
+      "stratum": "observational",
+      "title": "Unregulated Peptide Use in the Age of Biohacking: Digital Promotion, Gray-Market Access, and Emerging Public Health Risks.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "1626df1ce20dfeccb210afa20b08a0d460753349863f6f6404f7e2d8343e6775",
+      "doc_id": "PMID:42074872",
+      "doi": "10.3390/jcm15083070",
+      "journal": "",
+      "pmid": "42074872",
+      "stratum": "observational",
+      "title": "Digitally Guided Hybrid Maxillary Expansion with Supragingival Mandibular Miniplates for Class III Correction in Late Adolescents: A Pilot Clinical Study.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "161942e9a9a8c12b7d1be0513d33cdf6d05dae9bff4441725bf4cfce7cd4820f",
+      "doc_id": "PMID:42938442",
+      "doi": "10.3390/bs16101723",
+      "journal": "",
+      "pmid": "42938442",
+      "stratum": "observational",
+      "title": "The Dimensionality of the 19-Item Copenhagen Burnout Inventory Adapted for Students: A Bifactor Penalised SEM Analysis.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "7d9629dec78490030079d2ba354008dfc72c61e1d99cece769f9291e8d08c223",
+      "doc_id": "PMID:41479572",
+      "doi": "10.32607/actanaturae.27808",
+      "journal": "",
+      "pmid": "41479572",
+      "stratum": "observational",
+      "title": "The Potential of the Peptide Drug Semax and Its Derivative for Correcting Pathological Impairments in the Animal Model of Alzheimer's Disease.",
+      "year": 2025
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "db7851f95d1e18891699cc07b73f68f4b5d90cecd9a4acba837097fe7726c7e8",
+      "doc_id": "PMID:42885627",
+      "doi": "10.17116/oftalma202614205148",
+      "journal": "",
+      "pmid": "42885627",
+      "stratum": "observational",
+      "title": "[Changes in retinal light sensitivity and morphometry during surgical treatment of primary glaucoma with physiotherapeutic stimulation].",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "a3bba779b34f73e5aadc3647f5c1927bef694e325e82b5bad7ef9fe4a2dd7f18",
+      "doc_id": "PMID:42559144",
+      "doi": "10.7150/thno.128499",
+      "journal": "",
+      "pmid": "42559144",
+      "stratum": "observational",
+      "title": "Quantitative MRI Pharmacokinetic Modeling and MALDI Mass Spectrometry Imaging Biodistribution of a pH Mapping MRI Contrast Agent.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "1acfaa3937b480a20d881d9d826f807d4b6ee84d1877095dcac15ac914bb980a",
+      "doc_id": "PMID:38534749",
+      "doi": "10.3390/cimb46030133",
+      "journal": "",
+      "pmid": "38534749",
+      "stratum": "observational",
+      "title": "Melanocortin Derivatives Induced Vascularization and Neuroglial Proliferation in the Rat Brain under Conditions of Cerebral Ischemia.",
+      "year": 2024
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "5d4f0b6817beddcbce0ed9527c3707cba8dcacaa93f133ba2d433c5891fe5483",
+      "doc_id": "PMID:42123471",
+      "doi": "10.3390/ijms27093890",
+      "journal": "",
+      "pmid": "42123471",
+      "stratum": "preclinical",
+      "title": "Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions: Effects, Safety, Clinical Applications, and Future Perspectives.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "a7de376fce099f09005045c2d7b66a5120046a08e5f3b770a5c8d01c837f3453",
+      "doc_id": "PMID:40692165",
+      "doi": "10.1111/bph.70122",
+      "journal": "",
+      "pmid": "40692165",
+      "stratum": "preclinical",
+      "title": "Semax peptide targets the \u03bc opioid receptor gene Oprm1 to promote deubiquitination and functional recovery after spinal cord injury in female mice.",
+      "year": 2025
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "84c7ca539aadc921b5eb8b741e02a1c8836a186174f8c2facfa03b0bc1ffd39d",
+      "doc_id": "PMID:40496623",
+      "doi": "10.1155/bca/4226220",
+      "journal": "",
+      "pmid": "40496623",
+      "stratum": "preclinical",
+      "title": "Semax, a Copper Chelator Peptide, Decreases the Cu(II)-Catalyzed ROS Production and Cytotoxicity of a\u03b2 by Metal Ion Stripping and Redox Silencing.",
+      "year": 2025
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "1194d7bb48a787fcf62940e580df54258a711a54b197105cb9fd071e3257434f",
+      "doc_id": "PMID:42021992",
+      "doi": "10.3389/fragi.2026.1790247",
+      "journal": "",
+      "pmid": "42021992",
+      "stratum": "preclinical",
+      "title": "Therapeutic peptides in gerontology: mechanisms and applications for healthy aging.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "3f31808c428068d24cc3ffe3765370021da23c508605fdd69dd11ca2bb5bdad2",
+      "doc_id": "PMID:41171324",
+      "doi": "10.1007/s10517-025-06501-z",
+      "journal": "",
+      "pmid": "41171324",
+      "stratum": "preclinical",
+      "title": "The Effect of Peptide Semax, an ACTH(4-10) Analogue, on Intracellular Calcium Dynamics in Rat Brain Neurons.",
+      "year": 2025
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "057b6646abc36112e39007de994af7ffae6d7afbe9e727a6795415dd10db259c",
+      "doc_id": "PMID:40650034",
+      "doi": "10.3390/ijms26136256",
+      "journal": "",
+      "pmid": "40650034",
+      "stratum": "preclinical",
+      "title": "Genes That Associated with Action of ACTH-like Peptides with Neuroprotective Potential in Rat Brain Regions with Different Degrees of Ischemic Damage.",
+      "year": 2025
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "f26d6ad4a5261ac935dfe257b70b4bf34ae05993984352968eee12c3180f29f3",
+      "doc_id": "PMID:42941873",
+      "doi": "10.3390/ijms27209094",
+      "journal": "",
+      "pmid": "42941873",
+      "stratum": "preclinical",
+      "title": "Peptides and Peptide Analogues Targeting Acetylcholinesterase-Associated Mechanisms in Alzheimer's Disease and Dementias: Evidence Gaps, Design Strategies, and Translational Perspectives.",
+      "year": 2026
+    },
+    {
+      "compound": "PEPTIDE_DRUGS",
+      "content_hash": "371a4d7f258c22c5364f8b9a43a445e25f17eca5a536e0cee2bb242d4710c241",
+      "doc_id": "PMID:39767736",
+      "doi": "10.3390/biomedicines12122830",
+      "journal": "",
+      "pmid": "39767736",
+      "stratum": "preclinical",
+      "title": "ACTH-like Peptides Compensate Rat Brain Gene Expression Profile Disrupted by Ischemia a Day After Experimental Stroke.",
+      "year": 2024
+    }
+  ],
+  "queries": {
+    "BDNF/human_trial": {
+      "hits": 4987,
+      "query": "(BDNF OR \"brain-derived neurotrophic factor\") AND (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\")",
+      "retrieved": 40
+    },
+    "BDNF/observational": {
+      "hits": 32304,
+      "query": "(BDNF OR \"brain-derived neurotrophic factor\") AND (cohort OR \"cross-sectional\" OR observational) NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "BDNF/preclinical": {
+      "hits": 103508,
+      "query": "(BDNF OR \"brain-derived neurotrophic factor\") AND (mice OR rats OR \"in vitro\" OR \"cell culture\") NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "NPY/human_trial": {
+      "hits": 1533,
+      "query": "(\"neuropeptide Y\" OR NPY) AND (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\")",
+      "retrieved": 40
+    },
+    "NPY/observational": {
+      "hits": 9557,
+      "query": "(\"neuropeptide Y\" OR NPY) AND (cohort OR \"cross-sectional\" OR observational) NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "NPY/preclinical": {
+      "hits": 38256,
+      "query": "(\"neuropeptide Y\" OR NPY) AND (mice OR rats OR \"in vitro\" OR \"cell culture\") NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "OXT/human_trial": {
+      "hits": 4623,
+      "query": "(\"oxytocin\") AND (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\")",
+      "retrieved": 40
+    },
+    "OXT/observational": {
+      "hits": 14917,
+      "query": "(\"oxytocin\") AND (cohort OR \"cross-sectional\" OR observational) NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "OXT/preclinical": {
+      "hits": 33684,
+      "query": "(\"oxytocin\") AND (mice OR rats OR \"in vitro\" OR \"cell culture\") NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "PEPTIDE_DRUGS/human_trial": {
+      "hits": 7,
+      "query": "(Semax OR Selank) AND (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\")",
+      "retrieved": 7
+    },
+    "PEPTIDE_DRUGS/observational": {
+      "hits": 39,
+      "query": "(Semax OR Selank) AND (cohort OR \"cross-sectional\" OR observational) NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 39
+    },
+    "PEPTIDE_DRUGS/preclinical": {
+      "hits": 275,
+      "query": "(Semax OR Selank) AND (mice OR rats OR \"in vitro\" OR \"cell culture\") NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "SP/human_trial": {
+      "hits": 1603,
+      "query": "(\"substance P\") AND (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\")",
+      "retrieved": 40
+    },
+    "SP/observational": {
+      "hits": 8295,
+      "query": "(\"substance P\") AND (cohort OR \"cross-sectional\" OR observational) NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    },
+    "SP/preclinical": {
+      "hits": 41742,
+      "query": "(\"substance P\") AND (mice OR rats OR \"in vitro\" OR \"cell culture\") NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+      "retrieved": 40
+    }
+  },
+  "schema_version": 2,
+  "strata": {
+    "human_trial": "(PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\")",
+    "observational": "(cohort OR \"cross-sectional\" OR observational) NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")",
+    "preclinical": "(mice OR rats OR \"in vitro\" OR \"cell culture\") NOT (PUB_TYPE:\"Randomized Controlled Trial\" OR PUB_TYPE:\"Meta-Analysis\")"
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "updated": "2026-11-13",
+  "notes": "Curated seed lexicon. Identifiers are the normalization target; leave a field empty rather than guessing. ambiguous_acronyms require a document-local expansion before the acronym is accepted.",
+  "generic_terms": [
+    "peptide",
+    "peptides",
+    "neuropeptide",
+    "neuropeptides",
+    "neurotrophic factor",
+    "neurotrophic factors",
+    "neurotropic",
+    "neurotropics",
+    "neurotrophic",
+    "growth factor"
+  ],
+  "classes": {
+    "NP": "endogenous neuropeptide",
+    "NTF": "neurotrophic factor",
+    "NTS": "neurotropic substance or drug",
+    "NTS_PATHOGEN": "neurotropic pathogen (reported, not scored as a therapeutic)"
+  },
+  "entities": [
+    {
+      "id": "NP:OXT",
+      "class": "NP",
+      "name": "oxytocin",
+      "uniprot": "P01178",
+      "chebi": "CHEBI:7872",
+      "synonyms": ["oxytocin", "OXT", "OT", "alpha-hypophamine", "oxytocinergic"],
+      "ambiguous_acronyms": ["OT"]
+    },
+    {
+      "id": "NP:AVP",
+      "class": "NP",
+      "name": "arginine vasopressin",
+      "uniprot": "P01185",
+      "synonyms": ["vasopressin", "arginine vasopressin", "AVP", "ADH", "antidiuretic hormone", "VP"],
+      "ambiguous_acronyms": ["VP", "ADH"]
+    },
+    {
+      "id": "NP:NPY",
+      "class": "NP",
+      "name": "neuropeptide Y",
+      "uniprot": "P01303",
+      "synonyms": ["neuropeptide Y", "NPY"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:SP",
+      "class": "NP",
+      "name": "substance P",
+      "uniprot": "P20366",
+      "synonyms": ["substance P", "SP", "neurokinin-1 agonist"],
+      "ambiguous_acronyms": ["SP"]
+    },
+    {
+      "id": "NP:CGRP",
+      "class": "NP",
+      "name": "calcitonin gene-related peptide",
+      "uniprot": "P06881",
+      "synonyms": ["calcitonin gene-related peptide", "CGRP", "alpha-CGRP", "beta-CGRP"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:ORX",
+      "class": "NP",
+      "name": "orexin",
+      "synonyms": ["orexin", "orexin-A", "orexin-B", "hypocretin", "hypocretin-1", "hypocretin-2", "OXA", "OXB"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:SST",
+      "class": "NP",
+      "name": "somatostatin",
+      "uniprot": "P61278",
+      "synonyms": ["somatostatin", "SST", "SOM", "growth hormone release-inhibiting hormone"],
+      "ambiguous_acronyms": ["SOM"]
+    },
+    {
+      "id": "NP:CCK",
+      "class": "NP",
+      "name": "cholecystokinin",
+      "uniprot": "P06307",
+      "synonyms": ["cholecystokinin", "CCK", "CCK-8", "cholecystokinin octapeptide"],
+      "ambiguous_acronyms": ["CCK"]
+    },
+    {
+      "id": "NP:VIP",
+      "class": "NP",
+      "name": "vasoactive intestinal peptide",
+      "uniprot": "P01282",
+      "synonyms": ["vasoactive intestinal peptide", "vasoactive intestinal polypeptide", "VIP"],
+      "ambiguous_acronyms": ["VIP"]
+    },
+    {
+      "id": "NP:PACAP",
+      "class": "NP",
+      "name": "pituitary adenylate cyclase-activating peptide",
+      "uniprot": "P18509",
+      "synonyms": ["pituitary adenylate cyclase-activating peptide", "PACAP", "PACAP-38", "PACAP-27"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:GAL",
+      "class": "NP",
+      "name": "galanin",
+      "uniprot": "P22466",
+      "synonyms": ["galanin", "GAL"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:POMC",
+      "class": "NP",
+      "name": "beta-endorphin",
+      "uniprot": "P01189",
+      "synonyms": ["beta-endorphin", "beta endorphin", "endorphin", "POMC"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:PENK",
+      "class": "NP",
+      "name": "met-enkephalin",
+      "uniprot": "P01210",
+      "synonyms": ["met-enkephalin", "leu-enkephalin", "enkephalin", "enkephalins", "PENK"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:PDYN",
+      "class": "NP",
+      "name": "dynorphin",
+      "uniprot": "P01213",
+      "synonyms": ["dynorphin", "dynorphin A", "dynorphin B", "PDYN"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:NT",
+      "class": "NP",
+      "name": "neurotensin",
+      "uniprot": "P30990",
+      "synonyms": ["neurotensin", "NT"],
+      "ambiguous_acronyms": ["NT"]
+    },
+    {
+      "id": "NP:MCH",
+      "class": "NP",
+      "name": "melanin-concentrating hormone",
+      "uniprot": "P20382",
+      "synonyms": ["melanin-concentrating hormone", "melanin concentrating hormone", "MCH"],
+      "ambiguous_acronyms": ["MCH"]
+    },
+    {
+      "id": "NP:KISS",
+      "class": "NP",
+      "name": "kisspeptin",
+      "uniprot": "Q15726",
+      "synonyms": ["kisspeptin", "kisspeptin-10", "kisspeptin-54", "metastin", "KISS1"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:ADM",
+      "class": "NP",
+      "name": "adrenomedullin",
+      "uniprot": "P35318",
+      "synonyms": ["adrenomedullin", "ADM", "AM"],
+      "ambiguous_acronyms": ["AM"]
+    },
+    {
+      "id": "NP:APLN",
+      "class": "NP",
+      "name": "apelin",
+      "uniprot": "Q9ULZ1",
+      "synonyms": ["apelin", "apelin-13", "APLN"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:UCN",
+      "class": "NP",
+      "name": "urocortin",
+      "uniprot": "P55089",
+      "synonyms": ["urocortin", "urocortin-1", "urocortin-2", "urocortin-3"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:NUCB2",
+      "class": "NP",
+      "name": "nesfatin-1",
+      "uniprot": "P80303",
+      "synonyms": ["nesfatin-1", "nesfatin", "NUCB2"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NP:RLN",
+      "class": "NP",
+      "name": "relaxin",
+      "uniprot": "P04808",
+      "synonyms": ["relaxin", "relaxin-3", "RLN3"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTF:NGF",
+      "class": "NTF",
+      "name": "nerve growth factor",
+      "uniprot": "P01138",
+      "synonyms": ["nerve growth factor", "NGF", "beta-NGF"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTF:BDNF",
+      "class": "NTF",
+      "name": "brain-derived neurotrophic factor",
+      "uniprot": "P23560",
+      "synonyms": ["brain-derived neurotrophic factor", "brain derived neurotrophic factor", "BDNF"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTF:NT3",
+      "class": "NTF",
+      "name": "neurotrophin-3",
+      "uniprot": "P20783",
+      "synonyms": ["neurotrophin-3", "neurotrophin 3", "NT-3", "NT3"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTF:NT4",
+      "class": "NTF",
+      "name": "neurotrophin-4",
+      "uniprot": "P34130",
+      "synonyms": ["neurotrophin-4", "neurotrophin-4/5", "neurotrophin 4", "NT-4", "NT-4/5", "NT4"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTF:GDNF",
+      "class": "NTF",
+      "name": "glial cell line-derived neurotrophic factor",
+      "uniprot": "P39905",
+      "synonyms": ["glial cell line-derived neurotrophic factor", "glial cell-derived neurotrophic factor", "GDNF"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTF:CNTF",
+      "class": "NTF",
+      "name": "ciliary neurotrophic factor",
+      "uniprot": "P26441",
+      "synonyms": ["ciliary neurotrophic factor", "CNTF"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTF:LIF",
+      "class": "NTF",
+      "name": "leukemia inhibitory factor",
+      "uniprot": "P15018",
+      "synonyms": ["leukemia inhibitory factor", "leukaemia inhibitory factor", "LIF"],
+      "ambiguous_acronyms": ["LIF"]
+    },
+    {
+      "id": "NTS:SEMAX",
+      "class": "NTS",
+      "name": "Semax",
+      "synonyms": ["Semax", "semax", "Met-Glu-His-Phe-Pro-Gly-Pro", "ACTH(4-7) analog"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTS:SELANK",
+      "class": "NTS",
+      "name": "Selank",
+      "synonyms": ["Selank", "selank", "Thr-Lys-Pro-Arg-Pro-Gly-Pro"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTS:CEREBROLYSIN",
+      "class": "NTS",
+      "name": "Cerebrolysin",
+      "synonyms": ["Cerebrolysin", "cerebrolysin"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTS:MODAFINIL",
+      "class": "NTS",
+      "name": "modafinil",
+      "synonyms": ["modafinil", "armodafinil", "Provigil"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTS:MPH",
+      "class": "NTS",
+      "name": "methylphenidate",
+      "synonyms": ["methylphenidate", "Ritalin", "Concerta"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTS:AMPH",
+      "class": "NTS",
+      "name": "amphetamine",
+      "synonyms": ["amphetamine", "dextroamphetamine", "lisdexamfetamine", "Adderall"],
+      "ambiguous_acronyms": []
+    },
+    {
+      "id": "NTS_PATHOGEN:RABV",
+      "class": "NTS_PATHOGEN",
+      "name": "rabies virus",
+      "synonyms": ["rabies virus", "RABV", "rabies"],
+      "ambiguous_acronyms": []
+    }
+  ]
+}

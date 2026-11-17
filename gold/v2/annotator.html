@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ntx gold annotator (v2)</title>
+<style>
+  :root { --ink:#1b1b1b; --muted:#666; --line:#ddd; --bg:#fafafa; --accent:#0b5cad; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 -apple-system, Segoe UI, Roboto, sans-serif; color:var(--ink); }
+  header { padding:.6rem 1rem; border-bottom:1px solid var(--line); display:flex; gap:1rem; align-items:center; background:var(--bg); }
+  header h1 { font-size:1rem; margin:0; }
+  header .spacer { flex:1; }
+  main { display:grid; grid-template-columns: 260px minmax(0,1.4fr) minmax(320px,1fr); height:calc(100vh - 52px); }
+  aside, section { overflow:auto; padding:.8rem 1rem; }
+  aside { border-right:1px solid var(--line); }
+  section.panel { border-left:1px solid var(--line); }
+  .doc { padding:.35rem .5rem; border-radius:6px; cursor:pointer; font-size:13px; }
+  .doc:hover { background:#eef3f8; }
+  .doc.active { background:#dce9f6; font-weight:600; }
+  .doc .meta { color:var(--muted); font-weight:400; font-size:11px; }
+  #text { white-space:pre-wrap; font-family:ui-monospace, Consolas, monospace; font-size:13px; line-height:1.6;
+          border:1px solid var(--line); border-radius:8px; padding:.8rem; background:#fff; }
+  .toolbar { display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0; align-items:center; }
+  button { font:inherit; padding:.3rem .6rem; border:1px solid var(--line); border-radius:6px; background:#fff; cursor:pointer; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button.danger { color:#a11; }
+  input, select { font:inherit; padding:.25rem .35rem; border:1px solid var(--line); border-radius:5px; }
+  .claim, .mention { border:1px solid var(--line); border-radius:8px; padding:.5rem; margin-bottom:.5rem; background:#fff; }
+  .claim.draft { border-left:3px solid #d9a400; }
+  .claim.human { border-left:3px solid #2c7a3f; }
+  .quote { font-family:ui-monospace, Consolas, monospace; font-size:12px; color:#333; background:#f7f7f7; padding:.3rem; border-radius:4px; }
+  .fields { display:grid; grid-template-columns:auto 1fr; gap:.25rem .5rem; margin-top:.35rem; align-items:center; }
+  .hint { color:var(--muted); font-size:12px; }
+  .pill { display:inline-block; background:#eef3f8; border-radius:10px; padding:0 .45rem; font-size:11px; }
+  .error { color:#a11; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ntx gold annotator <span class="pill">schema v2</span></h1>
+  <span class="hint">Serve this directory over HTTP: <code>python -m http.server 8000</code></span>
+  <span class="spacer"></span>
+  <label class="hint">annotator <input id="annotator" placeholder="your initials"></label>
+  <button id="validate">Validate</button>
+  <button class="primary" id="export">Export JSONL</button>
+</header>
+<main>
+  <aside>
+    <div class="hint" id="progress"></div>
+    <div id="docs"></div>
+  </aside>
+  <section>
+    <div class="toolbar">
+      <button id="add-claim">Add claim from selection</button>
+      <button id="add-mention">Add entity mention from selection</button>
+      <span class="hint" id="selection"></span>
+    </div>
+    <div class="error" id="error"></div>
+    <div id="text"></div>
+  </section>
+  <section class="panel">
+    <h3 style="margin:.2rem 0 .6rem">Claims <span class="hint" id="claim-count"></span></h3>
+    <div id="claims"></div>
+    <h3 style="margin:1rem 0 .6rem">Mentions</h3>
+    <div id="mentions"></div>
+  </section>
+</main>
+<script>
+const DIRECTIONS = ["increase","decrease","none","mixed","unclear"];
+const OUTCOMES = ["cognition","memory","attention","social_cognition","anxiety","depression","feeding","pain","neuroplasticity","neuroprotection","other"];
+const ROLES = ["intervention","comparator","mechanism","unknown"];
+const FORMS = ["peptide","gene","acronym","brand","other"];
+
+const state = { docs: [], records: {}, current: null, annotator: "" };
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function docText(doc) { return (doc.title || "") + "\n\n" + (doc.abstract || ""); }
+
+function textFor(docId) {
+  const doc = state.docs.find((item) => item.doc_id === docId);
+  return doc ? docText(doc) : "";
+}
+
+async function boot() {
+  state.annotator = localStorage.getItem("ntx.annotator") || "";
+  $("annotator").value = state.annotator;
+  $("annotator").oninput = (e) => { state.annotator = e.target.value.trim(); localStorage.setItem("ntx.annotator", state.annotator); };
+  const corpus = await fetch("../../data/gold/corpus_v2.json").then((r) => r.json());
+  state.docs = corpus.documents || [];
+  const raw = await fetch("draft.jsonl").then((r) => r.text());
+  for (const line of raw.split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    const record = JSON.parse(line);
+    delete record._line;
+    record.status = "draft";
+    state.records[record.doc_id] = record;
+  }
+  for (const doc of state.docs) {
+    if (!state.records[doc.doc_id]) {
+      state.records[doc.doc_id] = { schema_version: 2, doc_id: doc.doc_id, annotator: "", status: "human", mentions: [], claims: [] };
+    }
+  }
+  renderDocList();
+  selectDoc(state.docs[0] && state.docs[0].doc_id);
+}
+
+function renderDocList() {
+  const box = $("docs");
+  box.innerHTML = "";
+  let edited = 0;
+  for (const doc of state.docs) {
+    const rec = state.records[doc.doc_id];
+    const human = rec.claims.some((c) => c.status === "human") || rec.mentions.some((m) => m.status === "human");
+    if (human) edited += 1;
+    const el = document.createElement("div");
+    el.className = "doc" + (doc.doc_id === state.current ? " active" : "");
+    el.innerHTML = '<div>' + esc(doc.doc_id) + '</div><div class="meta">' + esc(doc.compound || "") + " · " + esc(doc.stratum || "") + "</div>";
+    el.onclick = () => selectDoc(doc.doc_id);
+    box.appendChild(el);
+  }
+  $("progress").textContent = state.docs.length + " documents · " + edited + " touched";
+}
+
+function selectDoc(docId) {
+  state.current = docId;
+  const doc = state.docs.find((d) => d.doc_id === docId);
+  if (!doc) return;
+  $("text").textContent = docText(doc);
+  renderDocList();
+  renderRecords();
+}
+
+function renderRecords() {
+  const rec = state.records[state.current];
+  const claims = $("claims");
+  claims.innerHTML = "";
+  $("claim-count").textContent = "(" + rec.claims.length + ")";
+  rec.claims.forEach((claim, index) => claims.appendChild(claimCard(claim, index)));
+  const mentions = $("mentions");
+  mentions.innerHTML = "";
+  rec.mentions.forEach((mention, index) => {
+    const el = document.createElement("div");
+    el.className = "mention";
+    el.innerHTML = '<span class="pill">' + esc(mention.entity_id) + '</span> <span class="hint">' +
+      mention.start + "-" + mention.end + '</span> <span class="quote">' + esc(mention.surface || "") + '</span> ';
+    const del = document.createElement("button");
+    del.className = "danger"; del.textContent = "delete";
+    del.onclick = () => { rec.mentions.splice(index, 1); renderRecords(); };
+    el.appendChild(del);
+    mentions.appendChild(el);
+  });
+}
+
+function selectRow(label, options, value, onChange) {
+  const wrap = document.createElement("label");
+  wrap.textContent = label;
+  const select = document.createElement("select");
+  for (const option of options) {
+    const el = document.createElement("option");
+    el.value = option; el.textContent = option;
+    if (option === value) el.selected = true;
+    select.appendChild(el);
+  }
+  select.onchange = (e) => onChange(e.target.value);
+  wrap.appendChild(select);
+  return wrap;
+}
+
+function claimCard(claim, index) {
+  const rec = state.records[state.current];
+  const card = document.createElement("div");
+  card.className = "claim " + (claim.status === "human" ? "human" : "draft");
+  const text = textFor(state.current);
+  const evidence = Number.isInteger(claim.evidence_start) && Number.isInteger(claim.evidence_end)
+    ? text.slice(claim.evidence_start, claim.evidence_end)
+    : "";
+  card.innerHTML = '<div class="quote">' + esc(claim.sentence || "") + '</div>' +
+    '<div class="hint">' + esc(claim.entity_id) + " · " + claim.start + "-" + claim.end + " · section=" + esc(claim.section || "abstract") + " · " + esc(claim.status || "draft") + '</div>' +
+    (evidence ? '<div class="hint">evidence: "' + esc(evidence) + '"</div>' : "");
+  const fields = document.createElement("div");
+  fields.className = "fields";
+  fields.appendChild(selectRow("direction", DIRECTIONS, claim.direction, (v) => { claim.direction = v; claim.status = "human"; }));
+  fields.appendChild(selectRow("outcome", OUTCOMES, claim.outcome, (v) => { claim.outcome = v; claim.status = "human"; }));
+  fields.appendChild(selectRow("role", ROLES, claim.role || "unknown", (v) => { claim.role = v; claim.status = "human"; }));
+  fields.appendChild(selectRow("design", ["meta_analysis","systematic_review","rct","trial","cohort","case_control","cross_sectional","animal","in_vitro","review","unknown"], claim.design || "unknown", (v) => { claim.design = v; claim.status = "human"; }));
+  card.appendChild(fields);
+  const del = document.createElement("button");
+  del.className = "danger"; del.textContent = "delete";
+  del.onclick = () => { rec.claims.splice(index, 1); renderRecords(); };
+  card.appendChild(del);
+  return card;
+}
+
+function selectionOffsets() {
+  const container = $("text");
+  const sel = window.getSelection();
+  if (!sel.rangeCount) return null;
+  const range = sel.getRangeAt(0);
+  if (!container.contains(range.commonAncestorContainer)) return null;
+  const pre = range.cloneRange();
+  pre.selectNodeContents(container);
+  pre.setEnd(range.startContainer, range.startOffset);
+  const start = pre.toString().length;
+  const text = range.toString();
+  if (!text) return null;
+  return { start: start, end: start + text.length, text: text };
+}
+
+function updateSelectionHint() {
+  const sel = selectionOffsets();
+  $("selection").textContent = sel ? (sel.start + "-" + sel.end + " (" + sel.text.length + " chars)") : "select text in the abstract";
+}
+
+$("text").addEventListener("mouseup", updateSelectionHint);
+$("text").addEventListener("keyup", updateSelectionHint);
+
+$("add-claim").onclick = () => {
+  const sel = selectionOffsets();
+  $("error").textContent = "";
+  if (!sel) { $("error").textContent = "Select the sentence span first."; return; }
+  const entity = prompt("Entity ID (e.g. NP:OXT):", "NP:OXT");
+  if (!entity) return;
+  const rec = state.records[state.current];
+  rec.claims.push({
+    entity_id: entity.trim(), start: sel.start, end: sel.end, sentence: sel.text,
+    direction: "unclear", outcome: "other", role: "unknown", design: "unknown",
+    section: "abstract", evidence_start: sel.start, evidence_end: sel.end,
+    resolver: "human", reasons: [], status: "human",
+  });
+  renderRecords();
+};
+
+$("add-mention").onclick = () => {
+  const sel = selectionOffsets();
+  $("error").textContent = "";
+  if (!sel) { $("error").textContent = "Select the mention span first."; return; }
+  const entity = prompt("Entity ID for this mention:", "NP:OXT");
+  if (!entity) return;
+  const form = prompt("mention form: peptide, gene, acronym, brand, other", "peptide") || "other";
+  const rec = state.records[state.current];
+  rec.mentions.push({
+    entity_id: entity.trim(), start: sel.start, end: sel.end, surface: sel.text,
+    mention_form: FORMS.includes(form) ? form : "other", status: "human",
+  });
+  renderRecords();
+};
+
+function validateAll() {
+  const errors = [];
+  const designs = ["meta_analysis","systematic_review","rct","trial","cohort","case_control","cross_sectional","animal","in_vitro","review","unknown"];
+  for (const doc of state.docs) {
+    const rec = state.records[doc.doc_id];
+    const text = docText(doc);
+    for (const [i, c] of rec.claims.entries()) {
+      const where = doc.doc_id + " claims[" + i + "]";
+      if (!Number.isInteger(c.start) || !Number.isInteger(c.end) || c.start < 0 || c.end <= c.start) {
+        errors.push(where + ": invalid span");
+      } else {
+        if (c.end > text.length) errors.push(where + ": span exceeds text");
+        if (c.sentence && text.slice(c.start, c.end) !== c.sentence) errors.push(where + ": sentence mismatch");
+      }
+      if (!DIRECTIONS.includes(c.direction)) errors.push(where + ": direction " + c.direction);
+      if (!OUTCOMES.includes(c.outcome)) errors.push(where + ": outcome " + c.outcome);
+      if (!ROLES.includes(c.role || "unknown")) errors.push(where + ": role " + c.role);
+      if (c.design && !designs.includes(c.design)) errors.push(where + ": design " + c.design);
+      if (Number.isInteger(c.evidence_start) && Number.isInteger(c.evidence_end)) {
+        if (c.evidence_start < c.start || c.evidence_end > c.end || c.evidence_start > c.evidence_end) {
+          errors.push(where + ": evidence outside sentence");
+        }
+      }
+    }
+    for (const [i, m] of rec.mentions.entries()) {
+      const where = doc.doc_id + " mentions[" + i + "]";
+      if (!Number.isInteger(m.start) || !Number.isInteger(m.end) || m.start < 0 || m.end <= m.start) {
+        errors.push(where + ": invalid span");
+      } else if (m.end > text.length) {
+        errors.push(where + ": span exceeds text");
+      } else if (m.surface && text.slice(m.start, m.end) !== m.surface) {
+        errors.push(where + ": surface mismatch");
+      }
+      if (!FORMS.includes(m.mention_form || "other")) errors.push(where + ": mention_form " + m.mention_form);
+    }
+  }
+  return errors;
+}
+
+$("validate").onclick = () => {
+  const errors = validateAll();
+  $("error").textContent = errors.length
+    ? errors.length + " problem(s): " + errors.slice(0, 8).join(" | ")
+    : "schema OK: no problems found";
+};
+
+$("export").onclick = () => {
+  const errors = validateAll();
+  if (errors.length && !confirm(errors.length + " validation problem(s). Export anyway?")) {
+    $("error").textContent = "export cancelled: " + errors.length + " problem(s)";
+    return;
+  }
+  const lines = [];
+  for (const doc of state.docs) {
+    const rec = state.records[doc.doc_id];
+    const touched = rec.claims.some((c) => c.status === "human") || rec.mentions.some((m) => m.status === "human");
+    const out = {
+      schema_version: 2, doc_id: rec.doc_id, annotator: state.annotator || "anonymous", status: touched ? "human" : "draft",
+      mentions: rec.mentions.map((m) => ({ entity_id: m.entity_id, start: m.start, end: m.end, surface: m.surface, mention_form: m.mention_form || "other" })),
+      claims: rec.claims.map((c) => ({
+        entity_id: c.entity_id, start: c.start, end: c.end, sentence: c.sentence,
+        direction: c.direction, outcome: c.outcome, role: c.role || "unknown",
+        design: c.design || "unknown", section: c.section || "abstract",
+        evidence_start: c.evidence_start, evidence_end: c.evidence_end,
+        resolver: c.resolver || "human", reasons: c.reasons || [],
+      })),
+    };
+    lines.push(JSON.stringify(out));
+  }
+  const blob = new Blob([lines.join("\n") + "\n"], { type: "application/jsonl" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "annotations_" + (state.annotator || "anonymous") + ".jsonl";
+  link.click();
+};
+
+boot().catch((error) => { $("error").textContent = "Failed to load data: " + error; });
+</script>
+</body>
+</html>

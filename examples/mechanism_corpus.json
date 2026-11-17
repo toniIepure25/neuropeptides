@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "name": "mechanism-demo",
+    "note": "Synthetic sentences for exercising the mechanism layer; not a literature sample."
+  },
+  "results": [
+    {
+      "pmid": "910001",
+      "title": "Oxytocin receptor and CREB in memory and anxiety",
+      "abstractText": "Oxytocin improved memory through OXTR activation. Oxytocin reduced anxiety through CREB activation."
+    },
+    {
+      "pmid": "910002",
+      "title": "BDNF-TrkB signaling and plasticity",
+      "abstractText": "BDNF improved memory through TrkB activation. BDNF improved memory through CREB activation."
+    },
+    {
+      "pmid": "910003",
+      "title": "NGF-TrkA signaling in memory",
+      "abstractText": "NGF improved memory through TrkA activation."
+    }
+  ],
+  "annotations": {}
+}
