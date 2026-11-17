@@ -1,7 +1,7 @@
-.PHONY: install lint type test cov metadata gates demo reproduce profile synthesize ablate build clean
+.PHONY: install lint type test cov metadata api-check links docs gates demo reproduce profile benchmark synthesize ablate build release-check clean
 
 install:
-	python -m pip install -e ".[dev]"
+	python -m pip install -e ".[dev,docs,release]"
 
 lint:
 	python -m ruff check .
@@ -20,7 +20,16 @@ cov:
 metadata:
 	python scripts/check_release.py
 
-gates: lint type cov metadata
+api-check:
+	python scripts/check_api_contract.py
+
+links:
+	python scripts/check_docs_links.py
+
+docs:
+	python -m mkdocs build --strict
+
+gates: lint type cov metadata api-check links docs
 
 demo:
 	python -m ntx --frozen-time demo
@@ -33,6 +42,9 @@ reproduce:
 profile:
 	python scripts/profile_frame.py
 
+benchmark:
+	python scripts/benchmark.py --runs 5 --out build/benchmark.json
+
 synthesize:
 	python -m ntx synthesize --out reports/synthesis.md
 
@@ -43,5 +55,11 @@ ablate:
 build:
 	python -m build --wheel --outdir dist
 
+release-check:
+	python scripts/check_release.py --tag v0.18.0
+	python scripts/check_api_contract.py
+	python scripts/check_docs_links.py
+	python -m mkdocs build --strict
+
 clean:
-	python -c "import shutil; [shutil.rmtree(p, ignore_errors=True) for p in ('build', 'dist', 'reports', '.pytest_cache', '.mypy_cache', '.ruff_cache')]"
+	python -c "import shutil; [shutil.rmtree(p, ignore_errors=True) for p in ('build', 'dist', 'site', 'reports', '.pytest_cache', '.mypy_cache', '.ruff_cache')]"

@@ -31,3 +31,13 @@ repos:
         entry: python scripts/check_release.py
         language: system
         pass_filenames: false
+      - id: api-contract
+        name: OpenAPI contract
+        entry: python scripts/check_api_contract.py
+        language: system
+        pass_filenames: false
+      - id: docs-links
+        name: documentation links
+        entry: python scripts/check_docs_links.py
+        language: system
+        pass_filenames: false

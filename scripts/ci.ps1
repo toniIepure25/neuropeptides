@@ -15,6 +15,8 @@ try {
     python -m ruff format --check .
     python -m mypy src/ntx
     python scripts/check_release.py
+    python scripts/check_api_contract.py
+    python scripts/check_docs_links.py
     python -m pytest --cov=ntx --cov-branch --cov-report=term-missing --cov-report=json:coverage.json
     python scripts/coverage_gate.py coverage.json --line 93 --branch 85 --combined 90
 
