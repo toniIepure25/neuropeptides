@@ -27,6 +27,7 @@ All responses are JSON (`application/json; charset=utf-8`) with sorted keys.
 | `GET /api/v1/quality` | schema, provenance, effect and gold quality gates |
 | `GET /api/v1/reconciliation` | claim-level abstract/full-text report; optional `entity` |
 | `GET /api/v1/manifest/latest` | newest run manifest |
+| `GET /api/v1/openapi.json` | OpenAPI 3.1 contract for every route |
 
 Example:
 
@@ -56,6 +57,21 @@ curl.exe "http://127.0.0.1:8765/api/v1/claims?entity=NP:OXT&limit=2"
 }
 ```
 
+## OpenAPI contract
+
+The server publishes an OpenAPI 3.1 document at `GET /api/v1/openapi.json`. The
+document is available even when the database file is missing, so clients can
+discover the contract before a build exists.
+
+```powershell
+curl.exe http://127.0.0.1:8765/api/v1/openapi.json
+python scripts/check_api_contract.py
+```
+
+CI compares the document's paths and operation IDs with the server route table.
+The security schemes are documented, but authentication applies only when
+`NTX_API_TOKEN` is configured.
+
 ## Error contract
 
 | Status | When |
@@ -78,8 +94,9 @@ curl.exe "http://127.0.0.1:8765/api/v1/claims?entity=NP:OXT&limit=2"
 - `NTX_API_ALLOW_HOSTS` is a comma-separated Host allowlist; the default is
   `127.0.0.1,localhost,::1,[::1]`. Requests with another Host get `403`.
 - Responses send `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`,
-  `Referrer-Policy: no-referrer` and `Cache-Control: no-store`, including error
-  responses.
+  `Referrer-Policy: no-referrer`, a restrictive `Content-Security-Policy`,
+  `Cross-Origin-Resource-Policy: same-origin` and `Cache-Control: no-store`,
+  including error responses.
 - No CORS headers, no write endpoints, no file paths from user input beyond the
   configured database.
 - SQL uses bound parameters; `limit` and `offset` are range-checked.

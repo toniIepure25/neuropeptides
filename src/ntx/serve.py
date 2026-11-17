@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any, cast
 from urllib.parse import parse_qs, quote, urlsplit
 
-from . import __version__, discovery, quality, reconcile, synthesis
+from . import __version__, discovery, openapi, quality, reconcile, synthesis
 from .store import SCHEMA_VERSION, Store
 
 MAX_LIMIT = 200
@@ -35,6 +35,7 @@ ROUTES = {
     "/api/v1/quality",
     "/api/v1/reconciliation",
     "/api/v1/manifest/latest",
+    "/api/v1/openapi.json",
 }
 
 
@@ -124,6 +125,10 @@ class _Handler(BaseHTTPRequestHandler):
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header(
+            "Content-Security-Policy", "default-src 'none'; frame-ancestors 'none'; base-uri 'none'"
+        )
+        self.send_header("Cross-Origin-Resource-Policy", "same-origin")
         self.end_headers()
         self.wfile.write(body)
 
@@ -141,6 +146,10 @@ class _Handler(BaseHTTPRequestHandler):
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header(
+            "Content-Security-Policy", "default-src 'none'; frame-ancestors 'none'; base-uri 'none'"
+        )
+        self.send_header("Cross-Origin-Resource-Policy", "same-origin")
         for key, value in (headers or {}).items():
             self.send_header(key, value)
         self.end_headers()
@@ -170,6 +179,7 @@ class _Handler(BaseHTTPRequestHandler):
                         "/api/v1/quality",
                         "/api/v1/reconciliation?entity=",
                         "/api/v1/manifest/latest",
+                        "/api/v1/openapi.json",
                     ],
                 }
             )
@@ -179,6 +189,9 @@ class _Handler(BaseHTTPRequestHandler):
             return
         if route not in ROUTES:
             self._error(HTTPStatus.NOT_FOUND, "unknown route")
+            return
+        if route == "/api/v1/openapi.json":
+            self._send(openapi.build_spec())
             return
         if not self.db_path.exists():
             self._error(HTTPStatus.SERVICE_UNAVAILABLE, "database not found: %s" % self.db_path)

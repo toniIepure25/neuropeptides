@@ -65,6 +65,7 @@ Europe PMC / PubMed / Crossref          bundled corpus (offline demo)
 | `ntx.dashboard` | Self-contained HTML quality and reconciliation view |
 | `ntx.dbadmin` | Backup sidecars, verification, restore and operational doctor |
 | `ntx.serve` | Read-only local JSON API over a built database |
+| `ntx.openapi` | OpenAPI 3.1 contract built from the route table and package version |
 | `ntx.settings` | Optional `ntx.toml` with typed validation and precedence |
 | `ntx.manifest` | Content-addressed run manifests |
 | `ntx.clock` | Frozen-time mode for deterministic runs |

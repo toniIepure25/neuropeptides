@@ -29,7 +29,7 @@ roles, or tenant isolation.
 | --- | --- |
 | HTTP exposure | Loopback bind by default. Non-loopback binds require `NTX_API_TOKEN` of at least 16 characters and enforce a `Host` allowlist. |
 | API authentication | Bearer token comparison uses `hmac.compare_digest`; the token is never written to reports. |
-| Response headers | API responses set `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, and a restrictive Content-Security-Policy. |
+| Response headers | API responses set `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, a restrictive Content-Security-Policy and `Cross-Origin-Resource-Policy`. |
 | Provenance | `text[start:end] == sentence` is checked before reports render; forged spans fail closed. |
 | HTML output | Interpolated values are escaped; reports are self-contained and load no remote assets. |
 | SQL | All queries use parameter binding. |
@@ -37,6 +37,9 @@ roles, or tenant isolation.
 | XML | JATS `DOCTYPE`/`ENTITY` declarations are rejected before parsing. |
 | Local state | Caches are written atomically and `data/`, databases, and reports are git-ignored. |
 | Runtime supply chain | Runtime is Python standard library only. Development tools are explicit optional dependencies. |
+| CI supply chain | GitHub Actions are pinned to commit SHAs; CodeQL, dependency review and OpenSSF Scorecard run automatically. |
+| Release integrity | Releases include SHA-256 checksums, a CycloneDX SBOM and GitHub build-provenance attestations verified before publication. |
+| Repository controls | `main` is protected by required checks, linear history and a no-force-push rule; `v*` tags are protected by a ruleset. |
 
 ## Accepted risks
 

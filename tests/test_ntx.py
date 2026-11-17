@@ -50,6 +50,7 @@ from ntx import ingest as ingest_mod  # noqa: E402
 from ntx import ledger as ledger_mod  # noqa: E402
 from ntx import log as log_mod  # noqa: E402
 from ntx import mechanism as mechanism_mod  # noqa: E402
+from ntx import openapi as openapi_mod  # noqa: E402
 from ntx import power as power_mod  # noqa: E402
 from ntx import precursors as precursors_mod  # noqa: E402
 from ntx import quality as quality_mod  # noqa: E402
@@ -2403,7 +2404,7 @@ class TestRedactedGold(unittest.TestCase):
 class TestReleaseMetadata(unittest.TestCase):
     def test_checker_accepts_release_and_rejects_wrong_tag(self):
         ok = subprocess.run(
-            [sys.executable, "scripts/check_release.py", "--tag", "v0.17.0"],
+            [sys.executable, "scripts/check_release.py", "--tag", "v0.18.0"],
             cwd=ROOT,
             capture_output=True,
             text=True,
@@ -2916,6 +2917,18 @@ class TestServerAndSettings(unittest.TestCase):
         with urllib.request.urlopen(self.base + path) as response:
             return response.status, json.loads(response.read().decode("utf-8"))
 
+    def test_openapi_contract_endpoint(self):
+        spec = openapi_mod.build_spec()
+        self.assertEqual(spec["openapi"], "3.1.0")
+        self.assertEqual(spec["info"]["version"], openapi_mod.__version__)
+        self.assertEqual(set(spec["paths"]), set(serve_mod.ROUTES))
+        self.assertIn("bearerAuth", spec["components"]["securitySchemes"])
+        _, root = self._get("/")
+        self.assertIn("/api/v1/openapi.json", root["endpoints"])
+        status, served = self._get("/api/v1/openapi.json")
+        self.assertEqual(status, 200)
+        self.assertEqual(served, spec)
+
     def test_health_and_counts(self):
         status, health = self._get("/api/v1/health")
         self.assertEqual(status, 200)
@@ -2952,6 +2965,8 @@ class TestServerAndSettings(unittest.TestCase):
                 self.assertEqual(response.headers["X-Content-Type-Options"], "nosniff")
                 self.assertEqual(response.headers["X-Frame-Options"], "DENY")
                 self.assertEqual(response.headers["Referrer-Policy"], "no-referrer")
+                self.assertIn("default-src 'none'", response.headers["Content-Security-Policy"])
+                self.assertEqual(response.headers["Cross-Origin-Resource-Policy"], "same-origin")
             bad_host = urllib.request.Request(
                 base + "/api/v1/counts",
                 headers={"Host": "evil.example", "Authorization": "Bearer s3cret"},
@@ -3033,8 +3048,12 @@ class TestServerAndSettings(unittest.TestCase):
         thread = threading.Thread(target=missing.serve_forever, daemon=True)
         thread.start()
         try:
+            base = "http://127.0.0.1:%d" % missing.server_address[1]
+            with urllib.request.urlopen(base + "/api/v1/openapi.json") as response:
+                self.assertEqual(response.status, 200)
+                self.assertEqual(json.loads(response.read())["openapi"], "3.1.0")
             with self.assertRaises(urllib.error.HTTPError) as context:
-                urllib.request.urlopen("http://127.0.0.1:%d/api/v1/counts" % missing.server_address[1])
+                urllib.request.urlopen(base + "/api/v1/counts")
             self.assertEqual(context.exception.code, 503)
         finally:
             missing.shutdown()
