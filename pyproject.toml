@@ -32,7 +32,7 @@ dev = [
   "ruff>=0.6",
   "mypy>=1.11",
   "build>=1.2",
-  "pre-commit>=3.7",
+  "pre-commit>=4.7.0",
 ]
 docs = ["mkdocs-material>=9.5"]
 release = ["build>=1.2", "cyclonedx-bom>=6"]
