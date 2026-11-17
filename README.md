@@ -4,6 +4,7 @@
 neurotropic claims.**
 
 [![CI](https://github.com/toniIepure25/neuropeptides/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/toniIepure25/neuropeptides/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-live-4f46e5)](https://toniiepure25.github.io/neuropeptides/)
 [![Release](https://img.shields.io/github/v/release/toniIepure25/neuropeptides?display_name=tag)](https://github.com/toniIepure25/neuropeptides/releases)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-3776AB)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-yellow.svg)](LICENSE)
@@ -42,7 +43,7 @@ git clone https://github.com/toniIepure25/neuropeptides.git
 cd neuropeptides
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev,docs]"
 
 python -m ntx --frozen-time demo --db build\ntx.db --out reports
 python -m ntx check --db build\ntx.db
@@ -119,6 +120,23 @@ silently repairing it. Run manifests record the code version, git SHA, dirty
 state, Python/platform, ontology and corpus hashes, schema version and a
 content-addressed `run_id`.
 
+## API contract
+
+`ntx serve` exposes a local, read-only JSON API over a built database. Its
+OpenAPI 3.1 document is served at `/api/v1/openapi.json` and is checked against
+the route table in CI, so the published contract cannot silently drift from the
+server.
+
+```powershell
+python -m ntx demo --db build\demo.db
+python -m ntx serve --db build\demo.db --port 8765
+curl.exe http://127.0.0.1:8765/api/v1/openapi.json
+```
+
+The server binds to loopback by default, has no write endpoints, and requires a
+token plus Host allowlist for non-loopback binds. See [`docs/API.md`](docs/API.md)
+and the [OpenAPI contract](src/ntx/openapi.py).
+
 ## Evaluation status
 
 This repository does **not** yet contain a human-validated gold set.
@@ -148,10 +166,10 @@ Measured on the public tree with Python 3.13:
 
 | Metric | Current |
 | --- | ---: |
-| Tests | 293 |
-| Line coverage | 93.31% |
-| Branch coverage | 85.00% |
-| Combined coverage | 91.11% |
+| Tests | 304 |
+| Line coverage | 93.33% |
+| Branch coverage | 85.01% |
+| Combined coverage | 91.14% |
 | Demo records | 18 |
 | Provenance errors | 0 |
 
@@ -213,10 +231,13 @@ python -m mypy src/ntx
 python -m pytest --cov=ntx --cov-branch --cov-report=term-missing --cov-report=json:coverage.json
 python scripts/coverage_gate.py coverage.json --line 93 --branch 85 --combined 90
 python scripts/check_release.py
+python scripts/check_api_contract.py
+python scripts/check_docs_links.py
+python -m mkdocs build --strict
 ```
 
 The full local gate, including a clean-wheel install and demo, is
-`python scripts/ci.ps1`. Contributions must preserve exact provenance, avoid
+`python scripts/ci.ps1`; `make gates` runs the static, test, API and docs checks. Contributions must preserve exact provenance, avoid
 third-party text in public artefacts, and keep default reports deterministic.
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
@@ -230,7 +251,7 @@ If you use this software, cite the repository and the specific release:
   title   = {ntx: provenance-first surveillance and hypothesis triage for
              neuropeptide and neurotrophic claims},
   year    = {2026},
-  version = {0.17.0},
+  version = {0.18.0},
   url     = {https://github.com/toniIepure25/neuropeptides},
   license = {MIT}
 }
@@ -246,6 +267,17 @@ public issue. The optional API binds to loopback by default; non-loopback binds
 require a token of at least 16 characters and an explicit Host allowlist. See
 [`SECURITY.md`](SECURITY.md).
 
+## Supply chain
+
+- Every GitHub Action is pinned to an immutable commit SHA.
+- CodeQL, dependency review and OpenSSF Scorecard run automatically.
+- Releases include a CycloneDX SBOM, `SHA256SUMS` and GitHub build-provenance
+  attestations; the workflow verifies the attestation before publishing.
+- The runtime wheel remains standard-library-only and has no third-party
+  dependencies.
+- `main` is protected by required checks, linear history and a no-force-push
+  rule once the v0.18.0 release is published.
+
 ## Limitations and non-goals
 
 - No PDF layout analysis or OCR; full text is JATS XML from PMC.
@@ -257,17 +289,25 @@ require a token of at least 16 characters and an explicit Host allowlist. See
 
 ## Documentation
 
+- [Documentation site](https://toniiepure25.github.io/neuropeptides/)
+- [Command reference](docs/CLI.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Method and version history](docs/METHOD.md)
+- [Evaluation protocol and limits](docs/EVALUATION.md)
+- [Local API and OpenAPI](docs/API.md)
 - [Full-text reconciliation](docs/FULLTEXT.md)
 - [Data governance](docs/DATA_GOVERNANCE.md)
+- [Limitations](docs/LIMITATIONS.md)
 - [Gold protocol](gold/PROTOCOL_V2.md) and [codebook](gold/GUIDELINES.md)
 - [Release checklist](docs/RELEASE_CHECKLIST.md)
 - [Changelog](CHANGELOG.md)
+- [Governance](GOVERNANCE.md), [roadmap](ROADMAP.md), [support](SUPPORT.md) and
+  [maintainers](MAINTAINERS.md)
 
 ## Version history
 
-`0.17.0` is the first sanitized public release: text-free gold, a CC BY demo
-subset, PEP 561 typing and a tag-driven release workflow. Earlier versions added
-full-text reconciliation, quantitative effects, quality gates, backups, the API
-and the discovery/synthesis layers. See [`CHANGELOG.md`](CHANGELOG.md).
+`0.17.0` was the first sanitized public release. `0.18.0` adds the OpenAPI
+contract, documentation site, property tests, CodeQL/Scorecard, SBOM and
+build-provenance attestations. Earlier versions added full-text reconciliation,
+quantitative effects, quality gates, backups, the API and the
+discovery/synthesis layers. See [`CHANGELOG.md`](CHANGELOG.md).

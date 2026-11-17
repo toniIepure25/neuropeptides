@@ -15,6 +15,7 @@ htmlcov/
 # Build artifacts
 /build/
 /dist/
+/site/
 /wheels/
 
 # Runtime state (generated, never committed)

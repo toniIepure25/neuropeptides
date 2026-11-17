@@ -4,8 +4,8 @@ contact_links:
     url: https://github.com/toniIepure25/neuropeptides/security/advisories/new
     about: Report vulnerabilities privately; do not open a public issue.
   - name: Documentation
-    url: https://github.com/toniIepure25/neuropeptides/tree/main/docs
-    about: Read the architecture, method, governance and full-text guides.
+    url: https://toniiepure25.github.io/neuropeptides/
+    about: Read the architecture, method, evaluation, governance and API guides.
   - name: Questions and ideas
     url: https://github.com/toniIepure25/neuropeptides/discussions
     about: Ask usage questions or discuss research ideas.

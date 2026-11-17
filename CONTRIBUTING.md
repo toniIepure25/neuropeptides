@@ -9,7 +9,7 @@ scientific invariants below intact.
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev,docs]"
 pre-commit install
 ```
 
@@ -22,7 +22,15 @@ python -m mypy src/ntx
 python -m pytest --cov=ntx --cov-branch --cov-report=term-missing --cov-report=json:coverage.json
 python scripts/coverage_gate.py coverage.json --line 93 --branch 85 --combined 90
 python scripts/check_release.py
+python scripts/check_api_contract.py
+python scripts/check_docs_links.py
+python -m mkdocs build --strict
 ```
+
+The `docs/` tree is built strictly in CI. Add new pages to `mkdocs.yml` and keep
+relative links valid; the link checker reports file and line for missing targets.
+API changes must update `src/ntx/openapi.py` and keep
+`scripts/check_api_contract.py` green.
 
 ## Scientific invariants
 

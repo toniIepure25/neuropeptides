@@ -1,0 +1,94 @@
+site_name: ntx
+site_description: Provenance-first evidence surveillance for neuropeptide and neurotrophic claims.
+site_url: https://toniiepure25.github.io/neuropeptides/
+repo_url: https://github.com/toniIepure25/neuropeptides
+repo_name: toniIepure25/neuropeptides
+edit_uri: edit/main/docs/
+docs_dir: docs
+strict: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - search.highlight
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Overview: index.md
+  - Command reference: CLI.md
+  - Architecture: ARCHITECTURE.md
+  - Method: METHOD.md
+  - Evaluation: EVALUATION.md
+  - Local API: API.md
+  - Data governance: DATA_GOVERNANCE.md
+  - Integrity: INTEGRITY.md
+  - Full text: FULLTEXT.md
+  - Discovery: DISCOVERY.md
+  - Generation: GENERATION.md
+  - Ledger: LEDGER.md
+  - Calibration: CALIBRATION.md
+  - Performance: PERFORMANCE.md
+  - Limitations: LIMITATIONS.md
+  - Release checklist: RELEASE_CHECKLIST.md
+  - Research:
+      - Descriptive results: DESCRIPTIVE_RESULTS.md
+      - Manuscript outline: MANUSCRIPT_OUTLINE.md
+      - Registration: REGISTRATION.md
+  - ADRs:
+      - Claim granularity: adr/0001-claim-granularity.md
+      - No LLM core: adr/0002-no-llm-core.md
+      - Synthesis weights: adr/0003-synthesis-weights.md
+  - Release notes:
+      - v0.18.0: releases/v0.18.0.md
+      - v0.17.0: releases/v0.17.0.md
+      - v0.16.0: releases/v0.16.0.md
+      - v0.15.0: releases/v0.15.0.md
+      - v0.14.0: releases/v0.14.0.md
+      - v0.13.0: releases/v0.13.0.md
+      - v0.12.0: releases/v0.12.0.md
+      - v0.11.0: releases/v0.11.0.md
+      - v0.10.0: releases/v0.10.0.md
+      - v0.9.0: releases/v0.9.0.md
+      - v0.8.0: releases/v0.8.0.md
+      - v0.7.0: releases/v0.7.0.md
+      - v0.6.0: releases/v0.6.0.md
+      - v0.5.0: releases/v0.5.0.md
+      - v0.4.0: releases/v0.4.0.md
+      - v0.3.0: releases/v0.3.0.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search

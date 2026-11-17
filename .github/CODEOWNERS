@@ -1,0 +1,9 @@
+# Default owner for the public repository.
+* @toniIepure25
+
+# Security-sensitive and public-data surfaces.
+/.github/ @toniIepure25
+/src/ntx/annotation.py @toniIepure25
+/src/ntx/serve.py @toniIepure25
+/gold/ @toniIepure25
+/docs/DATA_GOVERNANCE.md @toniIepure25

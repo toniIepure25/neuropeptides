@@ -15,6 +15,9 @@
 - [ ] `python -m ruff format --check .`
 - [ ] `python -m mypy src/ntx`
 - [ ] `python scripts/check_release.py`
+- [ ] `python scripts/check_api_contract.py`
+- [ ] `python scripts/check_docs_links.py`
+- [ ] `python -m mkdocs build --strict` (if docs changed)
 
 ## Scientific and data checklist
 
