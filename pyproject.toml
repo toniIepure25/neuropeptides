@@ -31,11 +31,11 @@ dev = [
   "pytest-cov>=7.1.0",
   "ruff>=0.6",
   "mypy>=1.11",
-  "build>=1.2",
+  "build>=1.6.1",
   "pre-commit>=4.7.0",
 ]
 docs = ["mkdocs-material>=9.8.1"]
-release = ["build>=1.2", "cyclonedx-bom>=8.0.1"]
+release = ["build>=1.6.1", "cyclonedx-bom>=8.0.1"]
 
 [project.scripts]
 ntx = "ntx.cli:main"
